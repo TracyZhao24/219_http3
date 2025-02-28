@@ -1,0 +1,5926 @@
+[
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0000\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/://\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001://\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0000\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/://\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0000\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":://\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::://\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001://\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::://\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":://\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001://\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0000\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":://\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0000\u0000\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "://\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001://\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001://\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "://\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001\u0001?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001:?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001://\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:://\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:://\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:::?"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:?:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001://\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/::/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "://\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::#\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::/\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::#\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#:\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::\u0001/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001/\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001?\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001:/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001#::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:?\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001::\u0001\u0001#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001/\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:\u0001?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001:\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001#\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?:\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:/:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:\u0001\u0001:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#::\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:#:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:#:/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001://"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001:::/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0000\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001/\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001\u0001/"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:\u0001/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001:#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001?:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:/::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:::\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?::\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:?:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001:\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":::#:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":#\u0001:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#::\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:::::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "://\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?\u0001::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?:\u0000\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001::\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001#\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?:::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001/\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:/\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:/:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::::?\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/::/:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#\u0001\u0001\u0001:\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001\u0001?\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001?\u0001:/\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/:::\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::/:/\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001#:\u0001\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#\u0001\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":/\u0001\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:/\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "/\u0001\u0001:\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001?:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001/:\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001:\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001\u0001\u0001#\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:?\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":?::\u0001\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001\u0001\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "#:/\u0001::"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:\u0001\u0001:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001:#::\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "\u0001\u0001:::#"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::\u0001\u0001#\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001\u0001#\u0001:"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": ":\u0001:/:\u0001"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "?\u0001\u0001\u0000\u0000\u0000"
+    },
+    {
+        "base_uri": "http://a.a/a",
+        "relative_uri": "::?\u0001:\u0000"
+    }
+]

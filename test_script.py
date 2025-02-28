@@ -17,6 +17,7 @@ def send_http2_get_requests(file_path, log_file):
             try:
                 # Send the GET request
                 response = client.get(uri)
+                resolved_url = response.url
 
                 # Raises HTTPStatusError for 4xx/5xx responses
                 response.raise_for_status() 
@@ -24,6 +25,7 @@ def send_http2_get_requests(file_path, log_file):
                 # Log the successful response content
                 with open(log_file, 'a') as log:
                     log.write(f"Request to {uri} completed with status code: {response.status_code}\n")
+                    log.write(f"Resolved URL: {resolved_url}\n\n")
                     # Limit dump to first 200 chars
                     log.write(f"Response content from {uri}: {response.text[:200]}...\n\n")  
 
