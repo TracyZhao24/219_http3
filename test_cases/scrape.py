@@ -75,4 +75,6 @@ def write_strings_to_json(klee_output_dir, output_json_file):
         print("No test data found.")
 
 # Run the function
-write_strings_to_json("./test1", "./test1.json")
+# klee_output_dir: "./testX"
+# output_json_file: "./all_tests/testX.json"
+write_strings_to_json("./testX", "./all_tests/testX.json")

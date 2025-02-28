@@ -7,25 +7,28 @@ def send_http2_get_requests(file_path, log_file):
     
     # Trim any extra whitespace 
     uris = [uri.strip() for uri in uris]
+    base = "http://localhost:8080/"
     
     # Create an HTTP/2 client session
-    with httpx.Client(http_versions=[httpx.HTTPVersion.HTTP_2]) as client:
+    with httpx.Client(http1=True) as client:
         for i, uri in enumerate(uris):
             with open(log_file, 'a') as log:
                 log.write(f"Test case {i}: \n")
 
             try:
                 # Send the GET request
-                response = client.get(uri)
-                resolved_url = response.url
+                request_uri = base + uri
+                response = client.get(request_uri)
+                resolved_uri = response.url
 
                 # Raises HTTPStatusError for 4xx/5xx responses
                 response.raise_for_status() 
 
                 # Log the successful response content
+                # TODO handle if response is a directory instead of a file
                 with open(log_file, 'a') as log:
                     log.write(f"Request to {uri} completed with status code: {response.status_code}\n")
-                    log.write(f"Resolved URL: {resolved_url}\n\n")
+                    log.write(f"Resolved URI: {resolved_uri}\n\n")
                     # Limit dump to first 200 chars
                     log.write(f"Response content from {uri}: {response.text[:200]}...\n\n")  
 
@@ -57,10 +60,10 @@ def send_http2_get_requests(file_path, log_file):
                     log.write(f"An unexpected error occurred with {uri}: {str(e)}\n\n")
 
 
-test_file = 'uris.txt'
+test_file = 'first.txt'
 
 # open_source_impl_name_log.txt
 log_file = 'http_requests.txt'  
 
 # Call the function to send the requests
-send_http2_get_requests(test_file)
+send_http2_get_requests(test_file, log_file)
