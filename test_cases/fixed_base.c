@@ -436,19 +436,11 @@ char *resolve_uri(char *query_uri)
 
     /* The fragment always comes from ref (even if empty, it overrides). */
 
-    /* Build final URI string */
-    char *resolved = build_uri_string(ref);
-
-    /* Cleanup memory */
-    free(base->scheme);    free(base->authority); 
-    free(base->path);      free(base->query);
-    free(base->fragment);  free(base);
-
-    free(ref->scheme);     free(ref->authority); 
-    free(ref->path);       free(ref->query);
-    free(ref->fragment);   free(ref);
-
-    return resolved;
+ int is_valid_uri_char(char c)
+{
+    // Check for unreserved characters (A-Z, a-z, 0-9, -, _, ., ~)
+    return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') || (c >= '0' && c <= '9') ||
+        c == '-' || c == '_' || c == '.' || c == '~');
 }
 
 int main() {
@@ -467,6 +459,22 @@ int main() {
     klee_make_symbolic(&x3, sizeof(x3), "x3");
     klee_make_symbolic(&x4, sizeof(x4), "x4");
     klee_make_symbolic(&x5, sizeof(x5), "x5");
+
+    /*NOTE: 
+    - I've tried compiling a single isValidChar function to perform the comparison test,
+     and it doesnt work all the time.
+    - Currently, the following code only checks valid characters (i.e. characters that 
+    can appear anywhere in a URI).
+    - There are other characters 'Reserved Characters' that depend on certain semantics
+    of URI. Haven't implemented that.
+    */
+    klee_assume(is_valid_uri_char(x0));
+    klee_assume(is_valid_uri_char(x1));
+    klee_assume(is_valid_uri_char(x2));
+    klee_assume(is_valid_uri_char(x3));
+    klee_assume(is_valid_uri_char(x4));
+    klee_assume(is_valid_uri_char(x5));
+   
 
     uri[0] = x0;
     uri[1] = x1;
