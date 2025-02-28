@@ -1,24 +1,22 @@
 import httpx
 
 # Function to send HTTP/2 GET request for each URI
-def send_http2_get_requests(file_path, log_file):
+def send_http2_get_requests(baseURL, file_path, log_file):
     with open(file_path, 'r') as file:
         uris = file.readlines()
     
     # Trim any extra whitespace 
     uris = [uri.strip() for uri in uris]
-    base = "http://localhost:8080/"
     
     # Create an HTTP/2 client session
-    with httpx.Client(http1=True) as client:
+    with httpx.Client(base_url=baseURL, http1=True) as client:
         for i, uri in enumerate(uris):
             with open(log_file, 'a') as log:
-                log.write(f"Test case {i}: \n")
+                log.write(f"Test case {i}: {uri}\n")
 
             try:
                 # Send the GET request
-                request_uri = base + uri
-                response = client.get(request_uri)
+                response = client.get(uri)
                 resolved_uri = response.url
 
                 # Raises HTTPStatusError for 4xx/5xx responses
@@ -28,9 +26,9 @@ def send_http2_get_requests(file_path, log_file):
                 # TODO handle if response is a directory instead of a file
                 with open(log_file, 'a') as log:
                     log.write(f"Request to {uri} completed with status code: {response.status_code}\n")
-                    log.write(f"Resolved URI: {resolved_uri}\n\n")
+                    log.write(f"Resolved URI: {resolved_uri}\n")
                     # Limit dump to first 200 chars
-                    log.write(f"Response content from {uri}: {response.text[:200]}...\n\n")  
+                    log.write(f"Response content from {uri}: {response.text[:200]}\n\n")  
 
             except httpx.RequestError as e:
                 # General request error (e.g., connection issues)
@@ -62,8 +60,10 @@ def send_http2_get_requests(file_path, log_file):
 
 test_file = 'first.txt'
 
-# open_source_impl_name_log.txt
-log_file = 'http_requests.txt'  
+# name log file <http_impl_name>_log.txt
+log_file = 'nginx_log.txt'  
+
+baseURL = "http://localhost:8080"
 
 # Call the function to send the requests
-send_http2_get_requests(test_file, log_file)
+send_http2_get_requests(baseURL, test_file, log_file)
