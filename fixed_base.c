@@ -21,10 +21,10 @@
         core steps required by the relevant RFCs for basic URI resolution.
 */
 
+#include <klee/klee.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <klee/klee.h>
 
 /* A small structure to hold parsed URI components. */
 typedef struct {
@@ -362,8 +362,10 @@ static char *build_uri_string(const uri_components *uc) {
  *         d) Fragments always come from the query_uri unless query_uri fragment is empty.
  *      - Generate the final string from merged components.
  */
-char *resolve_uri(char *base_uri, char *query_uri) 
+char *resolve_uri(char *query_uri) 
 {
+    char *base_uri = "http://a.a/a"; /* Example base URI */
+
     /* Edge cases: if base_uri is NULL or empty, or query_uri is NULL */
     if (!base_uri) base_uri = "";
     if (!query_uri) query_uri = "";
@@ -450,9 +452,33 @@ char *resolve_uri(char *base_uri, char *query_uri)
 }
 
 int main() {
-    int a;
-    klee_make_symbolic(&a, sizeof(a), "a");
-    return get_sign(a);
+    char uri[7];
+
+    char x0;
+    char x1;
+    char x2;
+    char x3;
+    char x4;
+    char x5;
+
+    klee_make_symbolic(&x0, sizeof(x0), "x0");
+    klee_make_symbolic(&x1, sizeof(x1), "x1");
+    klee_make_symbolic(&x2, sizeof(x2), "x2");
+    klee_make_symbolic(&x3, sizeof(x3), "x3");
+    klee_make_symbolic(&x4, sizeof(x4), "x4");
+    klee_make_symbolic(&x5, sizeof(x5), "x5");
+
+    uri[0] = x0;
+    uri[1] = x1;
+    uri[2] = x2;
+    uri[3] = x3;
+    uri[4] = x4;
+    uri[5] = x5;
+    uri[6] = '\0'; 
+
+    resolve_uri(uri);
+
+    return 0;
 }
 
 /* 
