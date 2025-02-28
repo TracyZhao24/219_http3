@@ -451,6 +451,19 @@ char *resolve_uri(char *query_uri)
     return resolved;
 }
 
+int is_valid_uri_char(char c) {
+    // Valid URI characters as per RFC 3986:
+    // Unreserved: A-Z, a-z, 0-9, -, ., _, ~
+    // Reserved: : / ? # [ ] @ ! $ & ' ( ) * + , ; =
+    const char *valid = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        "abcdefghijklmnopqrstuvwxyz"
+                        "0123456789"
+                        "-._~:/?#[]@!$&'()*+,;=";
+    return (strchr(valid, c) != NULL);
+}
+
+
+
 int main() {
     char uri[7];
 
@@ -467,6 +480,13 @@ int main() {
     klee_make_symbolic(&x3, sizeof(x3), "x3");
     klee_make_symbolic(&x4, sizeof(x4), "x4");
     klee_make_symbolic(&x5, sizeof(x5), "x5");
+
+    klee_assume(is_valid_uri_char(x0));
+    klee_assume(is_valid_uri_char(x1));
+    klee_assume(is_valid_uri_char(x2));
+    klee_assume(is_valid_uri_char(x3));
+    klee_assume(is_valid_uri_char(x4));
+    klee_assume(is_valid_uri_char(x5));
 
     uri[0] = x0;
     uri[1] = x1;
