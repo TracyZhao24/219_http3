@@ -6,8 +6,6 @@ import os
 
 DIFF_TESTING = "./diff_testing"
 CONTAINER_PORT = 80
-RUN_DOCKER = True
-
 
 # Build docker image from dockerfile 
 def build_image(dockerfile_path, tag):
@@ -49,6 +47,14 @@ def start_all_containers():
         containers.append(container)
 
     return containers
+
+
+# Stop and remove all docker containers
+def stop_and_remove_containers(containers):
+    for container in containers:
+        container.stop()
+        container.remove()
+        print(f"Stopped and removed container {container.name}")
 
 
 # Send HTTP/1 GET request for each URI
@@ -113,10 +119,8 @@ def test_server(baseURL, file_path, log_file):
 
 
 def __main__():
-    # TODO: remove after adding code to clean up docker containers
-    if RUN_DOCKER:
-        print('Starting containers')
-        start_all_containers()
+    print('Starting containers')
+    containers = start_all_containers()
     
     test_file = 'unpack_test.json'
 
@@ -135,9 +139,12 @@ def __main__():
         for future in futures:
             future.result()
     
-    # TODO: stop and delete docker containers
-    
     print("Tests completed")
+
+    # stop and delete docker containers
+    print('Stopping containers')
+    stop_and_remove_containers(containers)
+    
 
 if __name__ == '__main__':
     __main__()
