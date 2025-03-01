@@ -2,3 +2,5 @@
 .viminfo
 .bash_history
 *.bc
+*.cache
+test_cases/klee*
