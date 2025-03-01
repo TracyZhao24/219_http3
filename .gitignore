@@ -3,4 +3,6 @@
 .bash_history
 *.bc
 *.cache
+
+test_cases/test*
 test_cases/klee*
