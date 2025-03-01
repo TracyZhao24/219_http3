@@ -12,6 +12,8 @@ The output directory needs to be a directory that Klee creates, it cannot alread
 
 5. To see the outputs, run ```ktest-tool [output-directory]/test######.ktest```
 
+# Formatting the Test Cases
+We wrote a python script to scrape the `ktest-tool` outputs into a json file. To run it, you have to be in the klee container. 
 
 # Differential Testing
 
