@@ -1,20 +1,17 @@
 import httpx
 import json
+from concurrent.futures import ThreadPoolExecutor
 
 # Function to send HTTP/1 GET request for each URI
 def send_http2_get_requests(baseURL, file_path, log_file):
     with open(file_path, 'r', encoding="utf-8") as file:
         uris = json.load(file)
     
-    # Trim any extra whitespace 
-    # uris = [uri.strip() for uri in uris]
-    
     # Create an HTTP/2 client session
     with httpx.Client(base_url=baseURL, http1=True) as client, open(log_file, 'a', encoding="utf-8") as log:
         for i, obj in enumerate(uris):
             uri = obj["relative_uri"].strip()
-            print(uri)
-            # continue
+            # print(uri)
 
             log.write(f"Test case {i}: {uri}\n")
 
@@ -62,12 +59,33 @@ def send_http2_get_requests(baseURL, file_path, log_file):
                 log.write(f"An unexpected error occurred with {uri}: {str(e)}\n\n")
 
 
+# test_file = 'unpack_test.json'
+
+# # name log file <http_impl_name>_log.txt
+# log_file = 'nginx_log.txt'  
+
+# baseURL = "http://localhost:8080"
+
+# # Call the function to send the requests
+# send_http2_get_requests(baseURL, test_file, log_file)
+
+def test_server(baseURL, file_path, log_file):
+    send_http2_get_requests(baseURL, file_path, log_file)
+
+
 test_file = 'unpack_test.json'
 
-# name log file <http_impl_name>_log.txt
-log_file = 'nginx_log.txt'  
+# Define the different server implementations and their log files
+servers = [
+    {"baseURL": "http://localhost:8080", "log_file": "nginx_log.txt"},
+    {"baseURL": "http://localhost:8081", "log_file": "h2o_log.txt"},
+    {"baseURL": "http://localhost:8082", "log_file": "apache_log.txt"}
+]
 
-baseURL = "http://localhost:8080"
+# Use ThreadPoolExecutor to run tests in parallel
+with ThreadPoolExecutor() as executor:
+    futures = [executor.submit(test_server, server["baseURL"], test_file, server["log_file"]) for server in servers]
 
-# Call the function to send the requests
-send_http2_get_requests(baseURL, test_file, log_file)
+    # Wait for all futures to complete
+    for future in futures:
+        future.result()
