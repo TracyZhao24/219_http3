@@ -40,7 +40,9 @@ def extract_c_string_from_ktest(ktest_file):
             hex_value = line[-5:]
             # print(hex_value)
             char = hex_to_char(hex_value)  # Convert hex to char
-            c_string += char  # Append the character to the string
+            # do not append null characters
+            if char != '\x00':
+                c_string += char  # Append the character to the string
     
     return c_string
 
