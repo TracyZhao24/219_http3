@@ -1,3 +1,3 @@
 FROM httpd
-COPY . /usr/local/apache2/htdocs/
+COPY model_fs/ /usr/local/apache2/htdocs/
 

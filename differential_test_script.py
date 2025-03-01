@@ -4,11 +4,16 @@ from concurrent.futures import ThreadPoolExecutor
 import docker
 import os
 
+DIFF_TESTING = "./diff_testing"
+CONTAINER_PORT = 80
+RUN_DOCKER = True
+
+
 # Build docker image from dockerfile 
 def build_image(dockerfile_path, tag):
     client = docker.from_env()
     print(f"Building image {tag} from {dockerfile_path}")
-    image, logs = client.images.build(path=dockerfile_path, tag=tag)
+    image, logs = client.images.build(path=DIFF_TESTING, dockerfile=dockerfile_path, tag=tag)
     for log in logs:
         print(log.get('stream', '').strip())
     return image
@@ -19,7 +24,7 @@ def start_container(name, image, port, client):
     container = client.containers.run(
         image.id,
         name=name,
-        ports={f"{port}/tcp": port},
+        ports={f"{CONTAINER_PORT}/tcp": port},
         detach=True
     )
     print(f"Started container {name} on port {port}")
@@ -31,9 +36,9 @@ def start_all_containers():
     client = docker.from_env()
     # Define  server configurations
     servers = [
-        {"name": "nginx", "dockerfile": "./diff_testing/nginx.dockerfile", "port": 8080},
-        {"name": "h2o", "dockerfile": "./diff_testing/h2o.dockerfile", "port": 8081},
-        {"name": "apache", "dockerfile": "./diff_testing/apache.dockerfile", "port": 8082}
+        {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
+        # {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8081},
+        {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8082}
     ]
 
     containers = []
@@ -76,15 +81,15 @@ def send_http2_get_requests(baseURL, file_path, log_file):
 
             except httpx.RequestError as e:
                 # General request error (e.g., connection issues)
-                resolved_uri = e.response.url
+                # resolved_uri = e.response.url
                 log.write(f"Request to {uri} failed: {str(e)}\n\n")
-                log.write(f"Resolved URL: {resolved_uri}\n\n")
+                # log.write(f"Resolved URL: {resolved_uri}\n\n")
 
             except httpx.TimeoutException as e:
                 # Timeout error (e.g., server took too long to respond)
-                resolved_uri = e.response.url
+                # resolved_uri = e.response.url
                 log.write(f"Request to {uri} timed out: {str(e)}\n\n")
-                log.write(f"Resolved URL: {resolved_uri}\n\n")
+                # log.write(f"Resolved URL: {resolved_uri}\n\n")
 
             except httpx.HTTPStatusError as e:
                 # HTTP error (e.g., 404, 500, etc.)
@@ -94,9 +99,9 @@ def send_http2_get_requests(baseURL, file_path, log_file):
 
             except httpx.TooManyRedirects as e:
                 # Too many redirects error
-                resolved_uri = e.response.url
+                # resolved_uri = e.response.url
                 log.write(f"Request to {uri} failed due to too many redirects: {str(e)}\n\n")
-                log.write(f"Resolved URL: {resolved_uri}\n\n")
+                # log.write(f"Resolved URL: {resolved_uri}\n\n")
 
             except Exception as e:
                 # Catch any other unexpected errors
@@ -108,16 +113,17 @@ def test_server(baseURL, file_path, log_file):
 
 
 def __main__():
-    print('Starting containers')
-
-    start_all_containers()
+    # TODO: remove after adding code to clean up docker containers
+    if RUN_DOCKER:
+        print('Starting containers')
+        start_all_containers()
     
     test_file = 'unpack_test.json'
 
     # Define the different server implementations and their log files
     servers = [
         {"baseURL": "http://localhost:8080", "log_file": "nginx_log.txt"},
-        {"baseURL": "http://localhost:8081", "log_file": "h2o_log.txt"},
+        # {"baseURL": "http://localhost:8081", "log_file": "h2o_log.txt"},
         {"baseURL": "http://localhost:8082", "log_file": "apache_log.txt"}
     ]
 
@@ -128,5 +134,10 @@ def __main__():
         # Wait for all futures to complete
         for future in futures:
             future.result()
-
+    
+    # TODO: stop and delete docker containers
+    
     print("Tests completed")
+
+if __name__ == '__main__':
+    __main__()
