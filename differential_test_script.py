@@ -1,13 +1,57 @@
 import httpx
 import json
 from concurrent.futures import ThreadPoolExecutor
+import docker
+import os
 
-# Function to send HTTP/1 GET request for each URI
+# Build docker image from dockerfile 
+def build_image(dockerfile_path, tag):
+    client = docker.from_env()
+    print(f"Building image {tag} from {dockerfile_path}")
+    image, logs = client.images.build(path=dockerfile_path, tag=tag)
+    for log in logs:
+        print(log.get('stream', '').strip())
+    return image
+
+
+# Start each docker container
+def start_container(name, image, port, client):
+    container = client.containers.run(
+        image.id,
+        name=name,
+        ports={f"{port}/tcp": port},
+        detach=True
+    )
+    print(f"Started container {name} on port {port}")
+    return container
+
+
+# Start all docker containers
+def start_all_containers():
+    client = docker.from_env()
+    # Define  server configurations
+    servers = [
+        {"name": "nginx", "dockerfile": "./diff_testing/nginx.dockerfile", "port": 8080},
+        {"name": "h2o", "dockerfile": "./diff_testing/h2o.dockerfile", "port": 8081},
+        {"name": "apache", "dockerfile": "./diff_testing/apache.dockerfile", "port": 8082}
+    ]
+
+    containers = []
+    for server in servers:
+        # Build the image from the Dockerfile
+        image = build_image(server["dockerfile"], server["name"])
+        container = start_container(server["name"], image, server["port"], client)
+        containers.append(container)
+
+    return containers
+
+
+# Send HTTP/1 GET request for each URI
 def send_http2_get_requests(baseURL, file_path, log_file):
     with open(file_path, 'r', encoding="utf-8") as file:
         uris = json.load(file)
     
-    # Create an HTTP/2 client session
+    # Create a HTTP client session
     with httpx.Client(base_url=baseURL, http1=True) as client, open(log_file, 'a', encoding="utf-8") as log:
         for i, obj in enumerate(uris):
             uri = obj["relative_uri"].strip()
@@ -59,33 +103,30 @@ def send_http2_get_requests(baseURL, file_path, log_file):
                 log.write(f"An unexpected error occurred with {uri}: {str(e)}\n\n")
 
 
-# test_file = 'unpack_test.json'
-
-# # name log file <http_impl_name>_log.txt
-# log_file = 'nginx_log.txt'  
-
-# baseURL = "http://localhost:8080"
-
-# # Call the function to send the requests
-# send_http2_get_requests(baseURL, test_file, log_file)
-
 def test_server(baseURL, file_path, log_file):
     send_http2_get_requests(baseURL, file_path, log_file)
 
 
-test_file = 'unpack_test.json'
+def __main__():
+    print('Starting containers')
 
-# Define the different server implementations and their log files
-servers = [
-    {"baseURL": "http://localhost:8080", "log_file": "nginx_log.txt"},
-    {"baseURL": "http://localhost:8081", "log_file": "h2o_log.txt"},
-    {"baseURL": "http://localhost:8082", "log_file": "apache_log.txt"}
-]
+    start_all_containers()
+    
+    test_file = 'unpack_test.json'
 
-# Use ThreadPoolExecutor to run tests in parallel
-with ThreadPoolExecutor() as executor:
-    futures = [executor.submit(test_server, server["baseURL"], test_file, server["log_file"]) for server in servers]
+    # Define the different server implementations and their log files
+    servers = [
+        {"baseURL": "http://localhost:8080", "log_file": "nginx_log.txt"},
+        {"baseURL": "http://localhost:8081", "log_file": "h2o_log.txt"},
+        {"baseURL": "http://localhost:8082", "log_file": "apache_log.txt"}
+    ]
 
-    # Wait for all futures to complete
-    for future in futures:
-        future.result()
+    # Use ThreadPoolExecutor to run tests
+    with ThreadPoolExecutor() as executor:
+        futures = [executor.submit(test_server, server["baseURL"], test_file, server["log_file"]) for server in servers]
+
+        # Wait for all futures to complete
+        for future in futures:
+            future.result()
+
+    print("Tests completed")
