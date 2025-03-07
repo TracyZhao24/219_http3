@@ -1,4 +1,5 @@
 import os
+import json
 import itertools
 
 def get_files(root_path):
@@ -8,6 +9,7 @@ def get_files(root_path):
         subdirs.update(dirnames, filenames)
 
     return subdirs
+
 
 def generate_paths(levels, limit = 4):
     levels.discard('.DS_Store') 
@@ -26,15 +28,29 @@ def generate_paths(levels, limit = 4):
     return paths
 
 
-def main():
-    subdirectories = get_files('./model_fs')
+def create_test_cases(subdirectories, base_url):
     paths = generate_paths(subdirectories)
     # if "B/a/A/b" in paths:
     #     print("Found B/a/A/b")
+    tests = []
 
-    with open('fs_paths.txt', 'w') as file:
-        for path in paths:
-            file.write(path + '\n')
+    for path in paths:
+        tests.append({
+            "base_uri": base_url,
+            "relative_uri": path
+        })
+
+    return tests
+
+
+def main():
+    subdirectories = get_files('./model_fs')
+    base_url = "http://localhost:8080"
+
+    tests = create_test_cases(subdirectories, base_url)
+
+    with open('fs_paths.json', 'w') as file:
+        json.dump(tests, file, indent=4)
 
 
 if __name__ == "__main__":
