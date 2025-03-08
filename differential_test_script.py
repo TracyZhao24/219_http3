@@ -35,8 +35,8 @@ def start_all_containers():
     # Define  server configurations
     servers = [
         {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
-        # {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8081},
-        {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8082}
+        {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8081},
+        # {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8082},
     ]
 
     containers = []
@@ -128,9 +128,9 @@ def __main__():
 
     # Define the different server implementations and their log files
     servers = [
-        {"baseURL": "http://localhost:8080", "log_file": "nginx"},
-        # {"baseURL": "http://localhost:8081", "log_file": "h2o_log.txt"},
-        {"baseURL": "http://localhost:8082", "log_file": "apache"}
+        {"baseURL": "http://localhost:8080", "log_file": "./nginx/run_1/"},
+        {"baseURL": "http://localhost:8081", "log_file": "./apache/run_1/"},
+        # {"baseURL": "http://localhost:8082", "log_file": "./h2o/run_1/"},
     ]
 
     # Use ThreadPoolExecutor to run tests
