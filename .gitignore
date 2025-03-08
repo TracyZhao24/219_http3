@@ -7,6 +7,6 @@
 test_cases/test*
 test_cases/klee*
 
-apache/run_*
-nginx/run_*
-h2o/run_*
+diff_testing/apache/run_*
+diff_testing/nginx/run_*
+diff_testing/h2o/run_*

@@ -130,9 +130,9 @@ def __main__():
 
         # Define the different server implementations and their log files
         servers = [
-            {"baseURL": "http://localhost:8080", "log_file": "./nginx/run_1/"},
-            {"baseURL": "http://localhost:8081", "log_file": "./apache/run_1/"},
-            {"baseURL": "http://localhost:8082", "log_file": "./h2o/run_1/"},
+            {"baseURL": "http://localhost:8080", "log_file": "./diff_testing/nginx/run_1/"},
+            {"baseURL": "http://localhost:8081", "log_file": "./diff_testing/apache/run_1/"},
+            {"baseURL": "http://localhost:8082", "log_file": "./diff_testing/h2o/run_1/"},
         ]
 
         # Use ThreadPoolExecutor to run tests
