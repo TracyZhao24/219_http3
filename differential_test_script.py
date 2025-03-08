@@ -121,31 +121,37 @@ def test_server(baseURL, file_path, log_file):
 
 
 def __main__():
-    print('Starting containers')
-    containers = start_all_containers()
-    
-    test_file = 'unpack_test.json'
+    containers = []
+    try:
+        print('Starting containers')
+        containers = start_all_containers()
+        
+        test_file = 'unpack_test.json'
 
-    # Define the different server implementations and their log files
-    servers = [
-        {"baseURL": "http://localhost:8080", "log_file": "./nginx/run_1/"},
-        {"baseURL": "http://localhost:8081", "log_file": "./apache/run_1/"},
-        # {"baseURL": "http://localhost:8082", "log_file": "./h2o/run_1/"},
-    ]
+        # Define the different server implementations and their log files
+        servers = [
+            {"baseURL": "http://localhost:8080", "log_file": "./nginx/run_1/"},
+            {"baseURL": "http://localhost:8081", "log_file": "./apache/run_1/"},
+            {"baseURL": "http://localhost:8082", "log_file": "./h2o/run_1/"},
+        ]
 
-    # Use ThreadPoolExecutor to run tests
-    with ThreadPoolExecutor() as executor:
-        futures = [executor.submit(test_server, server["baseURL"], test_file, server["log_file"]) for server in servers]
+        # Use ThreadPoolExecutor to run tests
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(test_server, server["baseURL"], test_file, server["log_file"]) for server in servers]
 
-        # Wait for all futures to complete
-        for future in futures:
-            future.result()
-    
-    print("Tests completed")
+            # Wait for all futures to complete
+            for future in futures:
+                future.result()
+        
+        print("Tests completed")
 
-    # stop and delete docker containers
-    print('Stopping containers')
-    stop_and_remove_containers(containers)
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+
+    finally:
+        # stop and delete docker containers
+        print('Stopping containers')
+        stop_and_remove_containers(containers)
     
 
 if __name__ == '__main__':
