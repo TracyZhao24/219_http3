@@ -6,3 +6,6 @@
 
 test_cases/test*
 test_cases/klee*
+
+apache/run_*
+nginx/run_*
