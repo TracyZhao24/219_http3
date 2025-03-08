@@ -9,3 +9,4 @@ test_cases/klee*
 
 apache/run_*
 nginx/run_*
+h2o/run_*
