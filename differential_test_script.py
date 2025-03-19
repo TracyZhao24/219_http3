@@ -58,10 +58,13 @@ def stop_and_remove_containers(containers):
 
 
 # Send HTTP/1 GET request for each URI
-def send_http2_get_requests(baseURL, file_path, base_log_file):
-    with open(file_path, 'r', encoding="utf-8") as file:
-        uris = json.load(file)
-    
+def send_http1_get_requests(baseURL, file_paths, base_log_file):
+    uris = []
+
+    for file_path in file_paths:
+        with open(file_path, 'r', encoding="utf-8") as file:
+            uris.extend(json.load(file))
+        
     # Create a HTTP client session
     with httpx.Client(base_url=baseURL, http1=True) as client:
         for i, obj in enumerate(uris):
@@ -116,8 +119,8 @@ def send_http2_get_requests(baseURL, file_path, base_log_file):
                     log.write(f"An unexpected error occurred with {uri}: {str(e)}\n\n")
 
 
-def test_server(baseURL, file_path, log_file):
-    send_http2_get_requests(baseURL, file_path, log_file)
+def test_server(baseURL, file_paths, log_file):
+    send_http1_get_requests(baseURL, file_paths, log_file)
 
 
 def __main__():
@@ -126,18 +129,19 @@ def __main__():
         print('Starting containers')
         containers = start_all_containers()
         
-        test_file = 'unpack_test.json'
+        test_files = ['./diff_testing/fs_paths.json', './test_cases/clean_tests/test2.json']
 
         # Define the different server implementations and their log files
         servers = [
             {"baseURL": "http://localhost:8080", "log_file": "./diff_testing/nginx/run_1/"},
             {"baseURL": "http://localhost:8081", "log_file": "./diff_testing/apache/run_1/"},
-            {"baseURL": "http://localhost:8082", "log_file": "./diff_testing/h2o/run_1/"},
+            # {"baseURL": "http://localhost:8082", "log_file": "./diff_testing/h2o/run_1/"},
+            {"baseURL": "http://localhost:8082", "log_file": "./diff_testing/caddy/run_1/"},
         ]
 
         # Use ThreadPoolExecutor to run tests
         with ThreadPoolExecutor() as executor:
-            futures = [executor.submit(test_server, server["baseURL"], test_file, server["log_file"]) for server in servers]
+            futures = [executor.submit(test_server, server["baseURL"], test_files, server["log_file"]) for server in servers]
 
             # Wait for all futures to complete
             for future in futures:
