@@ -1,7 +1,7 @@
 FROM caddy:latest
 
 # Copy your static files into the container
-COPY model_fs /usr/share/caddy
+COPY model_fs/ /usr/share/caddy
 
 # Copy Caddyfile (configuration for Caddy)
 COPY Caddyfile /etc/caddy/Caddyfile

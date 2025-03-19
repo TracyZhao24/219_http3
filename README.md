@@ -17,7 +17,10 @@ We wrote a python script to scrape the `ktest-tool` outputs into a json file. To
 
 # Differential Testing
 
-## Example: [nginx](https://hub.docker.com/_/nginx) Docker image
+## Running the Script
+
+
+## Making a Dockerfile for one HTTP Implementation: [nginx](https://hub.docker.com/_/nginx) Docker image
 
 1. Create a Dockerfile in the directory of your local testing filesystem. If you can an official image maintained on Docker Hub, you can get by with this: 
 ```
