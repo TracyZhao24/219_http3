@@ -94,6 +94,8 @@ def compare_logs_in_subfolders(output_file):
                 parsed_data = parse_log_file(path)
                 # Save it in all_results
                 all_results[server][test_idx] = parsed_data
+    
+    differences = []
 
     # 2) Compare across servers for each test case
     for idx in sorted(test_indices):
@@ -104,22 +106,20 @@ def compare_logs_in_subfolders(output_file):
             else:
                 print(f"{server} has no test #{idx} log file")
                 results_for_idx[server] = None
+        
+        
 
-        # Compare them to the first server in the dictionary
+        # Compare each server pair
         server_names = list(server_dirs.keys())
-        base = server_names[0]
-        base_data = results_for_idx[base]
+        for i in range(len(server_names)):
+            for j in range(i + 1, len(server_names)):
+                base = server_names[i]
+                other = server_names[j]
+                base_data = results_for_idx[base]
+                other_data = results_for_idx[other]
 
-        differences = []
-
-        if not base_data:
-            continue 
-
-        # Compare each other server
-        for other in server_names[1:]:
-            other_data = results_for_idx[other]
-            if not other_data:
-                continue
+                if not base_data or not other_data:
+                    continue
 
             # Compare status codes
             if base_data['status_code'] != other_data['status_code']:
@@ -130,8 +130,8 @@ def compare_logs_in_subfolders(output_file):
                     "base_status_code": base_data['status_code'],
                     "other_status_code": other_data['status_code']
                 })
-                # print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                #       f"status {base_data['status_code']} != {other_data['status_code']}")
+                print(f"[DIFF] Test#{idx} {base} vs {other}: "
+                      f"status {base_data['status_code']} != {other_data['status_code']}")
 
             # If both are success codes, compare resolved_uri
             if (base_data['status_code'] and base_data['status_code'] < 400 and
@@ -144,10 +144,10 @@ def compare_logs_in_subfolders(output_file):
                         "base_resolved_uri": base_data['resolved_uri'],
                         "other_resolved_uri": other_data['resolved_uri']
                     })
-                    # print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                    #       f"resolved_uri mismatch\n"
-                    #       f"  {base}: {base_data['resolved_uri']}\n"
-                    #       f"  {other}: {other_data['resolved_uri']}")
+                    print(f"[DIFF] Test#{idx} {base} vs {other}: "
+                          f"resolved_uri mismatch\n"
+                          f"  {base}: {base_data['resolved_uri']}\n"
+                          f"  {other}: {other_data['resolved_uri']}")
     
     with open(output_file, 'w', encoding="utf-8") as output:
         json.dump(differences, output, indent=4)
