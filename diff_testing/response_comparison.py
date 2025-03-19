@@ -2,6 +2,7 @@ import re
 import glob
 import os
 import urllib.parse
+import json
 
 def parse_log_file(log_path):
     """
@@ -56,7 +57,7 @@ def parse_log_file(log_path):
     return data
 
 
-def compare_logs_in_subfolders():
+def compare_logs_in_subfolders(output_file):
     """
     1. We look for JSON files named '0.json', '1.json', etc.
        in the subfolders for each server.
@@ -69,7 +70,8 @@ def compare_logs_in_subfolders():
     server_dirs = {
         "nginx": "./nginx/run_1",
         "apache": "./apache/run_1",
-        "h2o": "./h2o/run_1"
+        # "h2o": "./h2o/run_1",
+        "caddy": "./caddy/run_1"
     }
 
     # Store the parsed results in a dict-of-dicts:
@@ -108,6 +110,8 @@ def compare_logs_in_subfolders():
         base = server_names[0]
         base_data = results_for_idx[base]
 
+        differences = []
+
         if not base_data:
             continue 
 
@@ -119,20 +123,39 @@ def compare_logs_in_subfolders():
 
             # Compare status codes
             if base_data['status_code'] != other_data['status_code']:
-                print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                      f"status {base_data['status_code']} != {other_data['status_code']}")
+                differences.append({
+                    "test_case": idx,
+                    "comparison": f"{base} vs {other}",
+                    "difference": "status_code",
+                    "base_status_code": base_data['status_code'],
+                    "other_status_code": other_data['status_code']
+                })
+                # print(f"[DIFF] Test#{idx} {base} vs {other}: "
+                #       f"status {base_data['status_code']} != {other_data['status_code']}")
 
             # If both are success codes, compare resolved_uri
             if (base_data['status_code'] and base_data['status_code'] < 400 and
                 other_data['status_code'] and other_data['status_code'] < 400):
                 if base_data['resolved_uri'] != other_data['resolved_uri']:
-                    print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                          f"resolved_uri mismatch\n"
-                          f"  {base}: {base_data['resolved_uri']}\n"
-                          f"  {other}: {other_data['resolved_uri']}")
+                    differences.append({
+                        "test_case": idx,
+                        "comparison": f"{base} vs {other}",
+                        "difference": "resolved_uri",
+                        "base_resolved_uri": base_data['resolved_uri'],
+                        "other_resolved_uri": other_data['resolved_uri']
+                    })
+                    # print(f"[DIFF] Test#{idx} {base} vs {other}: "
+                    #       f"resolved_uri mismatch\n"
+                    #       f"  {base}: {base_data['resolved_uri']}\n"
+                    #       f"  {other}: {other_data['resolved_uri']}")
+    
+    with open(output_file, 'w', encoding="utf-8") as output:
+        json.dump(differences, output, indent=4)
+
 
 def main():
-    compare_logs_in_subfolders()
+    output_file = "diff_results.json"
+    compare_logs_in_subfolders(output_file)
 
 if __name__ == "__main__":
     main()

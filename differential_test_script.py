@@ -129,7 +129,8 @@ def __main__():
         print('Starting containers')
         containers = start_all_containers()
         
-        test_files = ['./diff_testing/fs_paths.json', './test_cases/clean_tests/test2.json']
+        # test_files = ['./diff_testing/fs_paths.json', './test_cases/clean_tests/test2.json']
+        test_files = ['./diff_testing/fs_paths.json']
 
         # Define the different server implementations and their log files
         servers = [
