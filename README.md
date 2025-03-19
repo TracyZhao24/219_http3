@@ -28,7 +28,7 @@ For NGINX this is `/usr/share/nginx/html`.
 
 2. In the directory diff_testing, run these commands to build, start your container, and expose the external port.
 ```
-docker build -t {tag} -f {image.dockerfile}.
+docker build -t {tag} -f {image.dockerfile} .
 docker run --name {container-name} -d -p 8080:80 {tag}
 ```
 

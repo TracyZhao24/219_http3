@@ -36,7 +36,7 @@ def start_all_containers():
     servers = [
         {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
         {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8081},
-        {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8082},
+        {"name": "caddy", "dockerfile": "caddy.dockerfile", "port": 8082},
     ]
 
     containers = []
