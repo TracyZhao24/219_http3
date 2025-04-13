@@ -130,8 +130,8 @@ def compare_logs_in_subfolders(output_file):
                     "base_status_code": base_data['status_code'],
                     "other_status_code": other_data['status_code']
                 })
-                print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                      f"status {base_data['status_code']} != {other_data['status_code']}")
+                # print(f"[DIFF] Test#{idx} {base} vs {other}: "
+                #       f"status {base_data['status_code']} != {other_data['status_code']}")
 
             # If both are success codes, compare resolved_uri
             if (base_data['status_code'] and base_data['status_code'] < 400 and
@@ -144,17 +144,17 @@ def compare_logs_in_subfolders(output_file):
                         "base_resolved_uri": base_data['resolved_uri'],
                         "other_resolved_uri": other_data['resolved_uri']
                     })
-                    print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                          f"resolved_uri mismatch\n"
-                          f"  {base}: {base_data['resolved_uri']}\n"
-                          f"  {other}: {other_data['resolved_uri']}")
+                    # print(f"[DIFF] Test#{idx} {base} vs {other}: "
+                    #       f"resolved_uri mismatch\n"
+                    #       f"  {base}: {base_data['resolved_uri']}\n"
+                    #       f"  {other}: {other_data['resolved_uri']}")
     
     with open(output_file, 'w', encoding="utf-8") as output:
         json.dump(differences, output, indent=4)
 
 
 def main():
-    output_file = "diff_results.json"
+    output_file = "diff_results_2.json"
     compare_logs_in_subfolders(output_file)
 
 if __name__ == "__main__":
