@@ -35,7 +35,7 @@ def start_all_containers():
     client = docker.from_env()
     # Define  server configurations
     servers = [
-        # {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
+        {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
         {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8081},
         {"name": "caddy", "dockerfile": "caddy.dockerfile", "port": 8082},
     ]
