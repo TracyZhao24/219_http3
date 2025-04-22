@@ -72,6 +72,6 @@ if __name__ == "__main__":
     uris = generate_all_violating_uris()
     # for uri in uris:
     #     print(uri)
-    with open('llm_tests.json', 'w') as file:
+    with open('llm_tests.txt', 'w') as file:
         for uri in uris:
             file.write(uri + "\n")
