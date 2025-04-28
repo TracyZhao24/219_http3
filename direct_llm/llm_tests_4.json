@@ -1,0 +1,282 @@
+[
+    {
+        "scheme": "",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: Empty scheme"
+    },
+    {
+        "scheme": "1http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: Begins with digit"
+    },
+    {
+        "scheme": "-ssh",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: Begins with dash"
+    },
+    {
+        "scheme": "ht tp",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: Space in scheme"
+    },
+    {
+        "scheme": "ht(tp",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: Parenthesis not allowed in scheme"
+    },
+    {
+        "scheme": "!scheme",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: Illegal starting character"
+    },
+    {
+        "scheme": "HTTP",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: All uppercase is not strictly invalid by RFC 3986, but some apps do treat it as a corner case"
+    },
+    {
+        "scheme": "scheme#test",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid scheme: Hash in scheme"
+    },
+    {
+        "scheme": "http",
+        "authority": "@",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Just the '@' sign, missing host"
+    },
+    {
+        "scheme": "http",
+        "authority": "user@@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Two '@' signs"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@@example:8080",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Two '@' signs plus port"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Has userinfo but no host part"
+    },
+    {
+        "scheme": "http",
+        "authority": ":@",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Colon followed by '@' with missing userinfo and host"
+    },
+    {
+        "scheme": "http",
+        "authority": "example..com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Double dot in domain label"
+    },
+    {
+        "scheme": "http",
+        "authority": "-example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Host starts with invalid character '-'"
+    },
+    {
+        "scheme": "http",
+        "authority": "example-.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Host ends with invalid character '-'"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com:",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Port delimiter colon with no port number"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com:abc",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Non-numeric port"
+    },
+    {
+        "scheme": "http",
+        "authority": "[::1234",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Missing closing bracket in IPv6 host"
+    },
+    {
+        "scheme": "http",
+        "authority": "[::1234]]",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid authority: Extra bracket in IPv6 host"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": " /leading-space",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid path: Starts with a space"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/has space",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid path: Unencoded space in path"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/endswithslash/",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid path: Trailing slash itself is not necessarily invalid but can be tested"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/perc%zz",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid path: Invalid percent-encoding"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/<script>",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid path: Angle brackets are not allowed unescaped"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "this/is/missing/leading/slash",
+        "query": "q=test&lang=en",
+        "fragment": "section-1",
+        "reason": "Invalid path: Relative path missing leading slash in absolute URI context"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=hello world",
+        "fragment": "section-1",
+        "reason": "Invalid query: Space character unencoded"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=%zz",
+        "fragment": "section-1",
+        "reason": "Invalid query: Invalid percent-encoding in query"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=<tag>",
+        "fragment": "section-1",
+        "reason": "Invalid query: Angle brackets unescaped in query"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q==value",
+        "fragment": "section-1",
+        "reason": "Invalid query: Consecutive equals sign might be suspicious"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "#",
+        "fragment": "section-1",
+        "reason": "Invalid query: Hash symbol in query (normally separates fragment)"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "some frag",
+        "reason": "Invalid fragment: Space in fragment"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "%zz",
+        "reason": "Invalid fragment: Invalid percent-encoding in fragment"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "<script>",
+        "reason": "Invalid fragment: Angle brackets in fragment"
+    },
+    {
+        "scheme": "http",
+        "authority": "user:pass@example.com",
+        "path": "/this/is/valid",
+        "query": "q=test&lang=en",
+        "fragment": "#",
+        "reason": "Invalid fragment: Extra hash inside fragment"
+    }
+]
