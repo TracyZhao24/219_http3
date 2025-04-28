@@ -15,5 +15,5 @@ python3 extremal_diff_test_script.py --test_files llm_tests_4.json --log_dir ext
 ## Comparing the Outputs
 Run the `response_comparison.py` script with the name of the subdirectory you wrote your log files to during the testing and an output file to write the results of the comparison to.
 ```
-python3 ../diff_testing/response_comparison.py --results_dir extremal_tests_1 --output_file diff_results_extremal_tests_1.json
+python3 ./diff_testing/response_comparison.py --results_dir extremal_tests_1 --output_file ./diff_testing/diff_results_extremal_tests_1.json
 ```
