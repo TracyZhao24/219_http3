@@ -38,6 +38,8 @@ def start_all_containers():
         {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
         {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8081},
         {"name": "caddy", "dockerfile": "caddy.dockerfile", "port": 8082},
+        {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8083},
+        {"name": "lighttpd", "dockerfile": "lighttpd.dockerfile", "port": 8084}
     ]
 
     containers = []
@@ -150,6 +152,8 @@ def __main__():
             {"baseURL": "http://localhost:8080", "log_file": f"./diff_testing/nginx/{args.log_dir}/"},
             {"baseURL": "http://localhost:8081", "log_file": f"./diff_testing/apache/{args.log_dir}/"},
             {"baseURL": "http://localhost:8082", "log_file": f"./diff_testing/caddy/{args.log_dir}/"},
+            {"baseURL": "http://localhost:8083", "log_file": f"./diff_testing/h2o/{args.log_dir}/"},
+            {"baseURL": "http://localhost:8084", "log_file": f"./diff_testing/lighttpd/{args.log_dir}/"}
         ]
 
         # Use ThreadPoolExecutor to run tests
