@@ -1,0 +1,187 @@
+[
+    {
+        "description": "Invalid scheme '1http'",
+        "uri": "1http://example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "description": "Invalid scheme 'http?'",
+        "uri": "http?://example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "description": "Invalid scheme 'ht tp'",
+        "uri": "ht tp://example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "description": "Invalid scheme 'http/https'",
+        "uri": "http/https://example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "description": "Invalid scheme '+scheme'",
+        "uri": "+scheme://example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "description": "Invalid scheme '~scheme'",
+        "uri": "~scheme://example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "description": "Invalid scheme ''",
+        "uri": "://example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "description": "Invalid authority '@'",
+        "uri": "http://@/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid authority 'user@:8080'",
+        "uri": "http://user@:8080/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid authority 'ex ample.com'",
+        "uri": "http://ex ample.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid authority 'exa$mple.com'",
+        "uri": "http://exa$mple.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid authority 'example.com:-1'",
+        "uri": "http://example.com:-1/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid authority 'example.com:99999'",
+        "uri": "http://example.com:99999/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid authority 'example.com:abc'",
+        "uri": "http://example.com:abc/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid authority ''",
+        "uri": "http:///this/is/valid?q=test#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "description": "Invalid path '/in valid/path'",
+        "uri": "http://example.com/in valid/path?q=test#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "description": "Invalid path '/in|valid|path'",
+        "uri": "http://example.com/in|valid|path?q=test#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "description": "Invalid path '\\windows\\path'",
+        "uri": "http://example.com\\windows\\path?q=test#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "description": "Invalid path 'this/has/no/leading/slash'",
+        "uri": "http://example.comthis/has/no/leading/slash?q=test#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "description": "Invalid path '/../../../etc/passwd'",
+        "uri": "http://example.com/../../../etc/passwd?q=test#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "description": "Invalid path '/path?with=query'",
+        "uri": "http://example.com/path?with=query?q=test#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "description": "Invalid path ''",
+        "uri": "http://example.com?q=test#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "description": "Invalid query '?q=invalid space'",
+        "uri": "http://example.com/this/is/valid?q=invalid space#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "description": "Invalid query '?q=<tag>'",
+        "uri": "http://example.com/this/is/valid?q=<tag>#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "description": "Invalid query '?&'",
+        "uri": "http://example.com/this/is/valid?&#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "description": "Invalid query '??'",
+        "uri": "http://example.com/this/is/valid??#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "description": "Invalid query '?q=value#anchor'",
+        "uri": "http://example.com/this/is/valid?q=value#anchor#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "description": "Invalid query '?q=☠'",
+        "uri": "http://example.com/this/is/valid?q=☠#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "description": "Invalid fragment '# frag ment'",
+        "uri": "http://example.com/this/is/valid?q=test# frag ment",
+        "reason": "Invalid fragment"
+    },
+    {
+        "description": "Invalid fragment '#<script>'",
+        "uri": "http://example.com/this/is/valid?q=test#<script>",
+        "reason": "Invalid fragment"
+    },
+    {
+        "description": "Invalid fragment '#%'",
+        "uri": "http://example.com/this/is/valid?q=test#%",
+        "reason": "Invalid fragment"
+    },
+    {
+        "description": "Invalid fragment '##doublehash'",
+        "uri": "http://example.com/this/is/valid?q=test##doublehash",
+        "reason": "Invalid fragment"
+    },
+    {
+        "description": "Invalid fragment '#☠'",
+        "uri": "http://example.com/this/is/valid?q=test#☠",
+        "reason": "Invalid fragment"
+    },
+    {
+        "description": "Invalid fragment '#?'",
+        "uri": "http://example.com/this/is/valid?q=test#?",
+        "reason": "Invalid fragment"
+    },
+    {
+        "description": "Invalid authority combo 'user:pa ss@example.com'",
+        "uri": "http://user:pa ss@example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority - space in userinfo"
+    },
+    {
+        "description": "Invalid authority combo 'us@er:pass@example.com'",
+        "uri": "http://us@er:pass@example.com/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority - illegal '@' in userinfo"
+    },
+    {
+        "description": "Invalid authority combo 'example.com:80808'",
+        "uri": "http://example.com:80808/this/is/valid?q=test#section-1",
+        "reason": "Invalid authority - port out of range"
+    }
+]

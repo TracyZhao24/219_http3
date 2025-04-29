@@ -7,7 +7,7 @@
 test_cases/test*
 test_cases/klee*
 
-diff_testing/apache/run_*
-diff_testing/nginx/run_*
-diff_testing/h2o/run_*
-diff_testing/caddy/run_*
+diff_testing/apache/*
+diff_testing/nginx/*
+diff_testing/h2o/*
+diff_testing/caddy/*

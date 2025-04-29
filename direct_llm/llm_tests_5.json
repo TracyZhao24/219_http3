@@ -1,0 +1,258 @@
+[
+    {
+        "scheme": "",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "1http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "ht tp",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "ht@tp",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "ht/tp",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "!!!",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "HTTP:",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "-http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid scheme"
+    },
+    {
+        "scheme": "http",
+        "authority": "",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": "user@",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com:port",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com::80",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": "exam ple.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": "exa#mple.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": ":",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": ".example.com.",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid authority"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this is/invalid",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/\u0000/path",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is#notallowed",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this??/something",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": " //leading-slash",
+        "query": "?q=test",
+        "fragment": "#section-1",
+        "reason": "Invalid path"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=hello world",
+        "fragment": "#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=abc#def",
+        "fragment": "#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=abc\u001fdef",
+        "fragment": "#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "???",
+        "fragment": "#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?=value",
+        "fragment": "#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=line1\nline2",
+        "fragment": "#section-1",
+        "reason": "Invalid query"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#some section",
+        "reason": "Invalid fragment"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section\b",
+        "reason": "Invalid fragment"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#/this/looks/like/path",
+        "reason": "Invalid fragment"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#",
+        "reason": "Invalid fragment"
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/this/is/valid",
+        "query": "?q=test",
+        "fragment": "#section\n1",
+        "reason": "Invalid fragment"
+    }
+]

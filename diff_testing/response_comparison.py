@@ -3,6 +3,7 @@ import glob
 import os
 import urllib.parse
 import json
+import argparse
 
 def parse_log_file(log_path):
     """
@@ -57,7 +58,7 @@ def parse_log_file(log_path):
     return data
 
 
-def compare_logs_in_subfolders(output_file):
+def compare_logs_in_subfolders(output_file, subfolder):
     """
     1. We look for JSON files named '0.json', '1.json', etc.
        in the subfolders for each server.
@@ -68,10 +69,10 @@ def compare_logs_in_subfolders(output_file):
 
     # Map server names to the folder where their logs live
     server_dirs = {
-        "nginx": "./nginx/run_1",
-        "apache": "./apache/run_1",
+        "nginx": f"./nginx/{subfolder}",
+        "apache": f"./apache/{subfolder}",
         # "h2o": "./h2o/run_1",
-        "caddy": "./caddy/run_1"
+        "caddy": f"./caddy/{subfolder}"
     }
 
     # Store the parsed results in a dict-of-dicts:
@@ -154,8 +155,20 @@ def compare_logs_in_subfolders(output_file):
 
 
 def main():
-    output_file = "diff_results_2.json"
-    compare_logs_in_subfolders(output_file)
+    parser = argparse.ArgumentParser(description="Compare responses of different HTTP servers.")
+    parser.add_argument(
+        '--results_dir',
+        required=True,
+        help="Subdirectory to read log files from (e.g., run_2, varied_fs_bases)"
+    )
+    parser.add_argument(
+        '--output_file',
+        required=True,
+        help="File to write results to."
+    )
+    args = parser.parse_args()
+
+    compare_logs_in_subfolders(args.output_file, args.results_dir)
 
 if __name__ == "__main__":
     main()

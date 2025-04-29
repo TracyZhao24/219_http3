@@ -28,28 +28,30 @@ def generate_paths(levels, limit = 4):
     return paths
 
 
-def create_test_cases(subdirectories, base_url):
-    paths = generate_paths(subdirectories)
-    # if "B/a/A/b" in paths:
-    #     print("Found B/a/A/b")
+def create_test_cases(subdirectories):
+    paths = generate_paths(subdirectories, limit = 4)
+    bases = generate_paths(subdirectories, limit = 2)
+
     tests = []
 
-    for path in paths:
-        tests.append({
-            "base_uri": base_url,
-            "relative_uri": path
-        })
+    for base in bases:
+        base_url = "http://localhost:8080/" + base
+        for path in paths:
+            tests.append({
+                "base_uri": base_url,
+                "relative_uri": path
+            })
 
     return tests
 
 
 def main():
     subdirectories = get_files('./model_fs')
-    base_url = "http://localhost:8080"
+    # base_url = "http://localhost:8080"
 
-    tests = create_test_cases(subdirectories, base_url)
+    tests = create_test_cases(subdirectories)
 
-    with open('fs_paths.json', 'w') as file:
+    with open('fs_relative_paths.json', 'w') as file:
         json.dump(tests, file, indent=4)
 
 
