@@ -1,0 +1,4 @@
+Test case 0: http://localhost:8080/B/a.txt/A/../b
+Request to http://localhost:8080/B/a.txt/A/../b returned error: 404
+Resolved URL: http://localhost:8080/B/a.txt/b
+
