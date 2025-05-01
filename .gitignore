@@ -3,6 +3,7 @@
 .bash_history
 *.bc
 *.cache
+.DS_Store
 
 test_cases/test*
 test_cases/klee*
