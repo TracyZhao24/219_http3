@@ -1,0 +1,226 @@
+[
+    {
+        "test_case": 2,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 400
+    },
+    {
+        "test_case": 8,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 500
+    },
+    {
+        "test_case": 8,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 500
+    },
+    {
+        "test_case": 8,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 500
+    },
+    {
+        "test_case": 14,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 500
+    },
+    {
+        "test_case": 14,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 500
+    },
+    {
+        "test_case": 14,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 500
+    },
+    {
+        "test_case": 15,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 400
+    },
+    {
+        "test_case": 16,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 200
+    },
+    {
+        "test_case": 16,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 200
+    },
+    {
+        "test_case": 31,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 31,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 31,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 32,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 400
+    },
+    {
+        "test_case": 33,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 33,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 34,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 34,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 36,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 400
+    },
+    {
+        "test_case": 37,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 37,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 37,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 57,
+        "comparison": "nginx vs caddy",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 400
+    },
+    {
+        "test_case": 58,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 58,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 59,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 59,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 60,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 60,
+        "comparison": "apache vs caddy",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    }
+]
