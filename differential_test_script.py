@@ -156,6 +156,10 @@ def __main__():
             {"baseURL": "http://localhost:8084", "log_file": f"./diff_testing/lighttpd/{args.log_dir}/"}
         ]
 
+        for server in servers:
+            # Ensure the log directory exists
+            os.makedirs(server["log_file"], exist_ok=True)
+
         # Use ThreadPoolExecutor to run tests
         with ThreadPoolExecutor() as executor:
             futures = [executor.submit(test_server, server["baseURL"], args.test_files, server["log_file"]) for server in servers]
