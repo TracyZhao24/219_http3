@@ -1,0 +1,191 @@
+{
+    "valid": [
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/foo//bar",
+        "query": "",
+        "fragment": "",
+        "reason": "Double slash indicates an empty path segment; allowed by RFC 3986:contentReference[oaicite:0]{index=0}, though some servers may collapse or reject it:contentReference[oaicite:1]{index=1}."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/a/./b/../c",
+        "query": "",
+        "fragment": "",
+        "reason": "Contains \".\" and \"..\" dot-segments which are valid; RFC 3986 says these are removed during resolution:contentReference[oaicite:2]{index=2}. This resolves to \"/a/c\"; parsers may behave inconsistently if they do not normalize properly."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/%2E%2E/foo",
+        "query": "",
+        "fragment": "",
+        "reason": "Percent-encoded dot-segments \"%2E%2E\" decode to \"..\" but here appear as literal data in a segment; RFC 3986 treats them as regular characters:contentReference[oaicite:3]{index=3}. Naive decoders may mistakenly perform path traversal."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/foo%2Fbar",
+        "query": "",
+        "fragment": "",
+        "reason": "Path contains \"%2F\" which decodes to \"/\" as data, not a separator. RFC 3986 allows \"/\" and \"?\" in query/fragment data:contentReference[oaicite:4]{index=4}. Some parsers wrongly split at this encoded \"/\"."
+      },
+      {
+        "scheme": "HTTP",
+        "authority": "ExAmPlE.CoM",
+        "path": "/PaTh",
+        "query": "",
+        "fragment": "",
+        "reason": "Scheme and host are case-insensitive:contentReference[oaicite:5]{index=5}. Mixed case here is equivalent to lowercase, though not all parsers normalize it."
+      },
+      {
+        "scheme": "http",
+        "authority": "user:pa:ss@example.com",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "Userinfo \"user:pa:ss\" contains a colon in the password. Userinfo allows \":\" and other sub-delims:contentReference[oaicite:6]{index=6}, but multiple colons may confuse parsers."
+      },
+      {
+        "scheme": "http",
+        "authority": "[2001:DB8::1]",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "IPv6 literal in authority is valid. Hex digits in IPv6 are case-insensitive:contentReference[oaicite:7]{index=7} (\"DB8\" here)."
+      },
+      {
+        "scheme": "http",
+        "authority": "xn--bcher-kva.de",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "Punycode domain for \"bücher.de\". RFC 3986 allows percent-encoded or IDNA (punycode) for internationalized names:contentReference[oaicite:8]{index=8}."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "query": "",
+        "fragment": "",
+        "reason": "Very long path (8001 'a' characters). HTTP recommends support for URIs of at least 8000 octets:contentReference[oaicite:9]{index=9}; this tests server length limits."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/path",
+        "query": "a=1&&b=2",
+        "fragment": "",
+        "reason": "Query with empty parameter (double &&). RFC 3986 permits consecutive '&'; an empty value is valid syntax:contentReference[oaicite:10]{index=10}."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/%C3%A9",
+        "query": "",
+        "fragment": "",
+        "reason": "Path contains UTF-8 percent-encoded character %C3%A9 (\"é\"). RFC 3986 allows percent-encoded UTF-8 octets in path:contentReference[oaicite:11]{index=11}."
+      },
+      {
+        "scheme": "mailto",
+        "authority": "",
+        "path": "user@example.com",
+        "query": "",
+        "fragment": "",
+        "reason": "Mailto URI uses path for the address, no authority; this is valid scheme-specific syntax."
+      }
+    ],
+    "invalid": [
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/foo bar",
+        "query": "",
+        "fragment": "",
+        "reason": "Space is not allowed in URIs; it must be percent-encoded (\"%20\"):contentReference[oaicite:12]{index=12}."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/foo%2Gbar",
+        "query": "",
+        "fragment": "",
+        "reason": "Invalid percent-encoding \"%2G\" (G is not hex). RFC 3986 requires two hex digits:contentReference[oaicite:13]{index=13}."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/foo%00bar",
+        "query": "",
+        "fragment": "",
+        "reason": "Contains percent-encoded NUL (%00). RFC 3986 notes %00 may require special handling and should be rejected if raw data is not expected:contentReference[oaicite:14]{index=14}."
+      },
+      {
+        "scheme": "http",
+        "authority": "user@example.com@evil.com",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "Multiple '@' characters; only one is allowed (delimiting userinfo and host):contentReference[oaicite:15]{index=15}."
+      },
+      {
+        "scheme": "http",
+        "authority": "192.168.001.001",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "IPv4 address has leading zeros in octets. RFC 3986 disallows leading zeros beyond a single digit:contentReference[oaicite:16]{index=16}."
+      },
+      {
+        "scheme": "1http",
+        "authority": "example.com",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "Scheme starts with a digit; RFC 3986 requires the first character to be a letter:contentReference[oaicite:17]{index=17}."
+      },
+      {
+        "scheme": "ht!tp",
+        "authority": "example.com",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "Scheme contains illegal character '!'; only letters, digits, '+', '-', '.' are allowed:contentReference[oaicite:18]{index=18}."
+      },
+      {
+        "scheme": "http",
+        "authority": "bücher.de",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "Authority contains raw non-ASCII 'ü'. Internationalized names must be percent-encoded or punycode:contentReference[oaicite:19]{index=19}."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/élève",
+        "query": "",
+        "fragment": "",
+        "reason": "Path contains raw non-ASCII characters (é, è). These must be UTF-8 percent-encoded:contentReference[oaicite:20]{index=20}."
+      },
+      {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/path",
+        "query": "",
+        "fragment": "frag ment",
+        "reason": "Space in fragment is not allowed (must be percent-encoded):contentReference[oaicite:21]{index=21}."
+      },
+      {
+        "scheme": "http",
+        "authority": "exa_mple.com",
+        "path": "/",
+        "query": "",
+        "fragment": "",
+        "reason": "Hostname contains underscore. DNS hostnames must follow RFC 1034/1123 rules, which disallow underscores:contentReference[oaicite:22]{index=22}."
+      }
+    ]
+  }
+  
