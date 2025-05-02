@@ -71,7 +71,7 @@ def compare_logs_in_subfolders(output_file, subfolder):
     server_dirs = {
         "nginx": f"./nginx/{subfolder}",
         "apache": f"./apache/{subfolder}",
-        # "h2o": "./h2o/run_1",
+        #"h2o": "./h2o/run_1",
         "caddy": f"./caddy/{subfolder}"
     }
 

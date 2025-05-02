@@ -159,6 +159,9 @@ def __main__():
             {"baseURL": "http://localhost:8082", "log_file": f"../diff_testing/caddy/{args.log_dir}/"},
         ]
 
+        for server in servers:
+            os.makedirs(server["log_file"], exist_ok=True)
+
         # Use ThreadPoolExecutor to run tests
         with ThreadPoolExecutor() as executor:
             futures = [executor.submit(test_server, server["baseURL"], args.test_files, server["log_file"]) for server in servers]
