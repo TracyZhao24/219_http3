@@ -38,6 +38,8 @@ def start_all_containers():
         {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
         {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8081},
         {"name": "caddy", "dockerfile": "caddy.dockerfile", "port": 8082},
+        {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8083},
+        {"name": "lighttpd", "dockerfile": "lighttpd.dockerfile", "port": 8084}
     ]
 
     containers = []
@@ -160,6 +162,10 @@ def __main__():
             {"baseURL": "http://localhost:8083", "log_file": f"./diff_testing/h2o/{args.log_dir}/"},
             {"baseURL": "http://localhost:8084", "log_file": f"./diff_testing/lighttpd/{args.log_dir}/"}
         ]
+
+        for server in servers:
+            # Ensure the log directory exists
+            os.makedirs(server["log_file"], exist_ok=True)
 
         # Use ThreadPoolExecutor to run tests
         with ThreadPoolExecutor() as executor:
