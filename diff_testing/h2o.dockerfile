@@ -15,4 +15,4 @@ COPY model_fs/ /usr/share/h2o/htdocs/
 EXPOSE 80
 
 # Start H2O in foreground
-CMD ["h2o", "-c", "/etc/h2o/h2o.conf", "-e"]
+CMD ["h2o", "-c", "/etc/h2o/h2o.conf"]
