@@ -45,11 +45,11 @@ def generate_valid_component(component_name):
     return generated_string
 
 
-def mutate_component(component):
+def mutate_component(component, component_name):
     mutations = []
     
     # interesting ASCII and Unicode characters
-    invalid_chars = [' ', '%00', '\x00', '\\', '`', '^', 'é', 'Σ', '€', '$', '%25', '%', '?', '@', '#']
+    invalid_chars = [' ', '%00', '\x00', '\\', '`', '^', '/', 'é', 'Σ', '€', '$', '%25', '%', '?', '@', '#', '-']
 
     for ch in invalid_chars:
         pos = random.randint(0, len(component))
@@ -63,6 +63,30 @@ def mutate_component(component):
 
     # corupt percent encodings
     mutations.append(component.replace('%', '%Z'))
+
+    if component_name == "scheme":
+        mutations.append("1" + component)
+        mutations.append("-" + component)
+        mutations.append("." + component)
+        mutations.append("b-")
+        mutations.append("a.")
+
+    if component_name == "path":
+        # Corrupt path separators
+        mutations.append(component.replace('/', '\\'))
+        mutations.append(component.replace('\\', '/'))
+        mutations.append(component.replace('/', '//'))
+        # directory traversal
+        mutations.append(component.replace('/', '/../../../../../../../../'))
+    
+    if component_name == "query":
+        mutations.append("?")
+        mutations.append("??")
+        mutations.append("?=value")
+        mutations.append("?name=")
+        mutations.append("?name=value&")
+        mutations.append("?x=1%262")
+
 
     return mutations
 
@@ -78,7 +102,7 @@ def generate_tests():
 
     tests = []
     for name, value in valid_uri.items():
-        mutations = mutate_component(value)
+        mutations = mutate_component(value, name)
         for mutation in mutations:
             test_case = valid_uri.copy()
             test_case[name] = mutation
