@@ -1,5 +1,4 @@
-{
-    "valid": [
+[
       {
         "scheme": "http",
         "authority": "example.com",
@@ -95,9 +94,7 @@
         "query": "",
         "fragment": "",
         "reason": "Mailto URI uses path for the address, no authority; this is valid scheme-specific syntax."
-      }
-    ],
-    "invalid": [
+      },
       {
         "scheme": "http",
         "authority": "example.com",
@@ -187,5 +184,4 @@
         "reason": "Hostname contains underscore. DNS hostnames must follow RFC 1034/1123 rules, which disallow underscores:contentReference[oaicite:22]{index=22}."
       }
     ]
-  }
   

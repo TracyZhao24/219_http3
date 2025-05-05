@@ -159,15 +159,12 @@ def __main__():
             {"baseURL": "http://localhost:8080", "log_file": f"../diff_testing/nginx/{args.log_dir}/"},
             {"baseURL": "http://localhost:8081", "log_file": f"../diff_testing/apache/{args.log_dir}/"},
             {"baseURL": "http://localhost:8082", "log_file": f"../diff_testing/caddy/{args.log_dir}/"},
-            {"baseURL": "http://localhost:8083", "log_file": f"./diff_testing/h2o/{args.log_dir}/"},
-            {"baseURL": "http://localhost:8084", "log_file": f"./diff_testing/lighttpd/{args.log_dir}/"}
+            {"baseURL": "http://localhost:8083", "log_file": f"../diff_testing/h2o/{args.log_dir}/"},
+            {"baseURL": "http://localhost:8084", "log_file": f"../diff_testing/lighttpd/{args.log_dir}/"},
         ]
 
         for server in servers:
-<<<<<<< HEAD
-=======
             # Ensure the log directory exists
->>>>>>> main
             os.makedirs(server["log_file"], exist_ok=True)
 
         # Use ThreadPoolExecutor to run tests
