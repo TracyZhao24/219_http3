@@ -1,0 +1,114 @@
+[
+    {
+        "test_case": 0,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 0,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 3,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 3,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 4,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 4,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 6,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 6,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 8,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 8,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    }
+]

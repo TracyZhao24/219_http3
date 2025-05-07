@@ -1,0 +1,113 @@
+[
+    {
+      "test case": 1,
+      "description": "Unescaped space in path",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/some folder/",
+        "query": ""
+      },
+      "expected": 400
+    },
+    {
+      "test case": 2,
+      "description": "Invalid percent-encoding in query",
+      "uri": {
+        "scheme": "https",
+        "authority": "example.com",
+        "path": "/search",
+        "query": "q=100%2Ginvalid"
+      },
+      "expected": 400
+    },
+    {
+      "test case": 3,
+      "description": "Unescaped hash in query",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.org",
+        "path": "/api",
+        "query": "param=value#fragment"
+      },
+      "expected": 400
+    },
+    {
+      "test case": 4,
+      "description": "Unencoded UTF-8 character in query",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/submit",
+        "query": "emoji=😊"
+      },
+      "expected": 400
+    },
+    {
+      "test case": 5,
+      "description": "Unescaped [ and ] in query",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/resource",
+        "query": "filter=[status]=active"
+      },
+      "expected": 400
+    },
+    {
+      "test case": 6,
+      "description": "Unescaped colon in path segment",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/user:name",
+        "query": ""
+      },
+      "expected": 400
+    },
+    {
+      "test case": 7,
+      "description": "Excessive path traversal",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/../../../../etc/passwd",
+        "query": ""
+      },
+      "expected": 403
+    },
+    {
+      "test case": 8,
+      "description": "Non-printable control character in query",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/data",
+        "query": "param=value\u0001"
+      },
+      "expected": 400
+    },
+    {
+      "test case": 9,
+      "description": "Redundant equal signs in query",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/config",
+        "query": "param==value"
+      },
+      "expected": 400
+    },
+    {
+      "test case": 10,
+      "description": "Malformed query with unescaped ampersands and equals",
+      "uri": {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/api",
+        "query": "param1=value1&&param2==value2"
+      },
+      "expected": 400
+    }
+  ]
+  

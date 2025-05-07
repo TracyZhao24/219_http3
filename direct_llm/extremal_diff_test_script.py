@@ -72,11 +72,11 @@ def send_http1_get_requests(baseURL, file_paths, base_log_file):
     with httpx.Client(base_url=baseURL, http1=True) as client:
         for i, obj in enumerate(test_cases):
             # Build the full path + query (ignore fragment)
-            full_path = obj["path"]
-            authority = obj["authority"]
-            if obj["query"]:
-                full_path += "?" + obj["query"]
-            uri = f"{obj['scheme']}://{obj['authority']}{full_path}"
+            full_path = obj["uri"]["path"]
+            authority = obj["uri"]["authority"]
+            if obj["uri"]["query"]:
+                full_path += "?" + obj["uri"]["query"]
+            uri = f"{obj['uri']['scheme']}://{obj['uri']['authority']}{full_path}"
 
             log_file = base_log_file + f"{i}.json"
             with open(log_file, 'w', encoding="utf-8") as log:
@@ -159,6 +159,8 @@ def __main__():
             {"baseURL": "http://localhost:8080", "log_file": f"../diff_testing/nginx/{args.log_dir}/"},
             {"baseURL": "http://localhost:8081", "log_file": f"../diff_testing/apache/{args.log_dir}/"},
             {"baseURL": "http://localhost:8082", "log_file": f"../diff_testing/caddy/{args.log_dir}/"},
+            {"baseURL": "http://localhost:8083", "log_file": f"../diff_testing/h2o/{args.log_dir}/"},
+            {"baseURL": "http://localhost:8084", "log_file": f"../diff_testing/lighttpd/{args.log_dir}/"}
         ]
 
         for server in servers:
