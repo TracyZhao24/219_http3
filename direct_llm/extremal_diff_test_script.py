@@ -35,11 +35,11 @@ def start_all_containers():
     client = docker.from_env()
     # Define  server configurations
     servers = [
-        {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
-        {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8081},
-        {"name": "caddy", "dockerfile": "caddy.dockerfile", "port": 8082},
-        {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8083},
-        {"name": "lighttpd", "dockerfile": "lighttpd.dockerfile", "port": 8084}
+        {"name": "nginx", "dockerfile": "../diff_testing/dockerfiles/nginx.dockerfile", "port": 8080},
+        {"name": "apache", "dockerfile": "../diff_testing/dockerfiles/httpd.dockerfile", "port": 8081},
+        {"name": "caddy", "dockerfile": "../diff_testing/dockerfiles/caddy.dockerfile", "port": 8082},
+        {"name": "h2o", "dockerfile": "../diff_testing/dockerfiles/h2o.dockerfile", "port": 8083},
+        {"name": "lighttpd", "dockerfile": "../diff_testing/dockerfiles/lighttpd.dockerfile", "port": 8084}
     ]
 
     containers = []
