@@ -35,11 +35,11 @@ def start_all_containers():
     client = docker.from_env()
     # Define  server configurations
     servers = [
-        {"name": "nginx", "dockerfile": "./diff_testing/dockerfiles/nginx.dockerfile", "port": 8080},
-        {"name": "apache", "dockerfile": "./diff_testing/dockerfiles/httpd.dockerfile", "port": 8081},
-        {"name": "caddy", "dockerfile": "./diff_testing/dockerfiles/caddy.dockerfile", "port": 8082},
-        {"name": "h2o", "dockerfile": "./diff_testing/dockerfiles/h2o.dockerfile", "port": 8083},
-        {"name": "lighttpd", "dockerfile": "./diff_testing/dockerfiles/lighttpd.dockerfile", "port": 8084}
+        {"name": "nginx", "dockerfile": "nginx.dockerfile", "port": 8080},
+        {"name": "apache", "dockerfile": "httpd.dockerfile", "port": 8081},
+        {"name": "caddy", "dockerfile": "caddy.dockerfile", "port": 8082},
+        {"name": "h2o", "dockerfile": "h2o.dockerfile", "port": 8083},
+        {"name": "lighttpd", "dockerfile": "lighttpd.dockerfile", "port": 8084}
     ]
 
     containers = []
@@ -68,58 +68,61 @@ def send_http1_get_requests(baseURL, file_paths, base_log_file):
         with open(file_path, 'r', encoding="utf-8") as file:
             uris.extend(json.load(file))
         
-    for i, obj in enumerate(uris):
-        base_uri = obj["base_uri"].strip()
-        relative_uri = obj["relative_uri"].strip()
-        full_uri = f"{base_uri}/{relative_uri}"  # Construct the full URL
+    with httpx.Client(base_url=baseURL, http1=True) as client:
+        for i, obj in enumerate(uris):
+            # base_uri = obj["base_uri"].strip()
+            relative_uri = obj["relative_uri"].strip()
+            # full_uri = f"{base_uri}/{relative_uri}"  # Construct the full URL
+            full_uri = baseURL + '/' + relative_uri
 
-        log_file = base_log_file + f"{i}.json"
+            log_file = base_log_file + f"{i}.json"
 
-        with open(log_file, 'w', encoding="utf-8") as log:
-            log.write(f"Test case {i}: {full_uri}\n")
+            with open(log_file, 'w', encoding="utf-8") as log:
+                log.write(f"Test case {i}: {relative_uri}\n")
 
-            try:
-                # Send the GET request
-                response = httpx.get(full_uri)
-                resolved_uri = response.url
+                try:
+                    # Send the GET request
+                    # response = httpx.get(full_uri)
+                    response = client.get(relative_uri)
+                    resolved_uri = response.url
 
-                # Raises HTTPStatusError for 4xx/5xx responses
-                response.raise_for_status() 
+                    # Raises HTTPStatusError for 4xx/5xx responses
+                    response.raise_for_status() 
 
-                # Log the successful response content
-                # TODO handle if response is a directory instead of a file
-                log.write(f"Request to {full_uri} completed with status code: {response.status_code}\n")
-                log.write(f"Resolved URI: {resolved_uri}\n")
-                # Limit dump to first 200 chars
-                log.write(f"Response content from {full_uri}: {response.text[:200]}\n\n")  
+                    # Log the successful response content
+                    # TODO handle if response is a directory instead of a file
+                    log.write(f"Request to {full_uri} completed with status code: {response.status_code}\n")
+                    log.write(f"Resolved URI: {resolved_uri}\n")
+                    # Limit dump to first 200 chars
+                    log.write(f"Response content from {full_uri}: {response.text[:200]}\n\n")  
 
-            except httpx.RequestError as e:
-                # General request error (e.g., connection issues)
-                # resolved_uri = e.response.url
-                log.write(f"Request to {full_uri} failed: {str(e)}\n\n")
-                # log.write(f"Resolved URL: {resolved_uri}\n\n")
+                except httpx.RequestError as e:
+                    # General request error (e.g., connection issues)
+                    # resolved_uri = e.response.url
+                    log.write(f"Request to {full_uri} failed: {str(e)}\n\n")
+                    # log.write(f"Resolved URL: {resolved_uri}\n\n")
 
-            except httpx.TimeoutException as e:
-                # Timeout error (e.g., server took too long to respond)
-                # resolved_uri = e.response.url
-                log.write(f"Request to {full_uri} timed out: {str(e)}\n\n")
-                # log.write(f"Resolved URL: {resolved_uri}\n\n")
+                except httpx.TimeoutException as e:
+                    # Timeout error (e.g., server took too long to respond)
+                    # resolved_uri = e.response.url
+                    log.write(f"Request to {full_uri} timed out: {str(e)}\n\n")
+                    # log.write(f"Resolved URL: {resolved_uri}\n\n")
 
-            except httpx.HTTPStatusError as e:
-                # HTTP error (e.g., 404, 500, etc.)
-                resolved_uri = e.response.url
-                log.write(f"Request to {full_uri} returned error: {e.response.status_code}\n")
-                log.write(f"Resolved URL: {resolved_uri}\n\n")
+                except httpx.HTTPStatusError as e:
+                    # HTTP error (e.g., 404, 500, etc.)
+                    resolved_uri = e.response.url
+                    log.write(f"Request to {full_uri} returned error: {e.response.status_code}\n")
+                    log.write(f"Resolved URL: {resolved_uri}\n\n")
 
-            except httpx.TooManyRedirects as e:
-                # Too many redirects error
-                # resolved_uri = e.response.url
-                log.write(f"Request to {full_uri} failed due to too many redirects: {str(e)}\n\n")
-                # log.write(f"Resolved URL: {resolved_uri}\n\n")
+                except httpx.TooManyRedirects as e:
+                    # Too many redirects error
+                    # resolved_uri = e.response.url
+                    log.write(f"Request to {full_uri} failed due to too many redirects: {str(e)}\n\n")
+                    # log.write(f"Resolved URL: {resolved_uri}\n\n")
 
-            except Exception as e:
-                # Catch any other unexpected errors
-                log.write(f"An unexpected error occurred with {full_uri}: {str(e)}\n\n")
+                except Exception as e:
+                    # Catch any other unexpected errors
+                    log.write(f"An unexpected error occurred with {full_uri}: {str(e)}\n\n")
 
 
 def test_server(baseURL, file_paths, log_file):
