@@ -1,0 +1,154 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Contains symlink A (in /a) pointing to /B, so this resolves to /B/b/a.txt. Caddy (by default) will not follow the symlink and return 404, whereas Nginx/Apache/Lighttpd will follow it, showing inconsistent behavior."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/b.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Also uses symlink A->/B, resolving to /B/b/b.txt. Demonstrates how symlink resolution can serve different content depending on the server’s symlink policy."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Uses symlink a->/a inside /B, so this resolves to /a/b/a.txt. Tests how servers handle a symlink from one directory back into another; behavior may vary if symlinks are not followed."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/b/b.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Similarly, /B/a->/a means /B/a/b/b.txt maps to /a/b/b.txt. Highlights differences in reverse symlink traversal on different servers."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Chained symlinks: /a/A -> /B, then /B/a -> /a, resulting in /a/b/a.txt. This creates a loop in resolution. Some servers may detect the loop or fail when following repeated symlinks."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/a/A/b/b.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Longer symlink cycle: /a/A->/B, /B/a->/a, /a/A->/B again, then /B/b/b.txt. Repeated indirection can confuse normalization logic or hit symlink recursion limits in some servers."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/../A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path normalization first collapses /a/b/../ to /a/, yielding /a/A/b/a.txt, then symlink A->/B resolves to /B/b/a.txt. Tests order of normalization vs. symlink resolution."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/../../B/b/b.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Traversal above /a: /a/b/../../ takes us to root (/), then /B/b/b.txt. Many servers forbid going above the document root, so this checks if such traversal is blocked consistently."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/%2E%2E/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Contains percent-encoded \"..\": /a/A/%2E%2E/ decodes to /a/A/../ and normalizes to /a/b/a.txt. Some servers decode then normalize, while others may mishandle the encoded segment differently."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/.%2e/A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Mixes encoded and raw dots (\".%2e\"). Apache 2.4.49 had a bug where patterns like this bypassed path normalization. Tests how servers decode and normalize such sequences."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a//b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Double-slash in path: Apache/Nginx collapse multiple slashes into one, while browsers do not. Serves to check if any server treats \"/a//b\" differently from \"/a/b\"."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/./a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Dot segment in path: \"/./\" should be removed by normalization (yielding /a/b/a.txt). Ensures servers consistently handle \".\" segments."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/\u200B/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Zero-width space (U+200B) in path segment \"a\u200B\": an invisible character. Some systems may strip or ignore it, causing mismatches or unexpected 404 errors."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/\u200C/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Zero-width non-joiner (U+200C) in path: similar invisible char issue. Tests whether the server normalizes or rejects such Unicode characters in paths."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b\\..\\a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Backslashes around \"..\": on Windows, Apache treats \"\\\" like \"/\". So \"/a/b\\..\\a.txt\" can act like \"/a/b/../a.txt\", potentially bypassing naive filters."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/%",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing percent sign without two hex digits: invalid escape. Some servers return 400 Bad Request, others might treat it literally or sanitize differently."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:99999",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port number 99999 is out of the valid range. Server implementations may clamp, error, or mis-parse the authority in inconsistent ways."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:80:80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Authority with two colons: ambiguous port syntax. Some servers use only the first colon (treating the rest as part of the host), others may reject or misinterpret this format."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing colon with no port: some servers accept and use default port 80, others consider it malformed. Tests consistency in authority parsing."
+  }
+]
