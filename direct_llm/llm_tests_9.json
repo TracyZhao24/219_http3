@@ -1,0 +1,163 @@
+[
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/%00",
+      "query": "",
+      "fragment": "",
+      "reason": "Path includes a percent-encoded NUL byte (%00), which can cause issues in C-based servers by terminating strings early, potentially leading to 500 errors."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/%2e%2e/%2e%2e/%2e%2e/etc/passwd",
+      "query": "",
+      "fragment": "",
+      "reason": "Encoded dot-segments attempt directory traversal. Improper decoding or normalization may allow path traversal, causing server crashes or access violations."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/foo%2Fbar",
+      "query": "",
+      "fragment": "",
+      "reason": "Encoded slash (%2F) may be interpreted as a path separator by some servers, leading to ambiguous routing or security bypasses."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/a/./b/../c",
+      "query": "",
+      "fragment": "",
+      "reason": "Path includes dot-segments ('.' and '..') which should normalize to '/a/c'. Servers with broken normalization may misroute or error."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/foo bar",
+      "query": "",
+      "fragment": "",
+      "reason": "Space in path is illegal unless percent-encoded. Unencoded space often causes request parsing to fail (400 or 500 error)."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/foo%2Gbar",
+      "query": "",
+      "fragment": "",
+      "reason": "Invalid percent-encoding (%2G) — 'G' is not hexadecimal. Parsers expecting only valid encodings may throw or crash."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/",
+      "query": "a=%00",
+      "fragment": "",
+      "reason": "NUL byte in query string (%00) can break backend parsing or terminate strings unexpectedly in C-based systems."
+    },
+    {
+        "scheme": "http",
+        "authority": "example.com",
+        "path": "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "query": "",
+        "fragment": "",
+        "reason": "Very long path (8001 'a' characters). HTTP recommends support for URIs of at least 8000 octets:contentReference[oaicite:9]{index=9}; this tests server length limits."
+      },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/%C3%A9",
+      "query": "",
+      "fragment": "",
+      "reason": "Valid UTF-8 (é) if decoded correctly, but broken Unicode handling may crash parsers expecting ASCII or misinterpret encoding."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/path",
+      "query": "a=1&&b=2",
+      "fragment": "",
+      "reason": "Multiple consecutive '&' in query string may cause malformed parameter lists or edge-case parsing bugs."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/%RRfoo",
+      "query": "",
+      "fragment": "",
+      "reason": "Invalid percent sequence (%RR). 'R' is not a hex digit, leading to decoding errors or crashes in URI parsers."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/%E3%81",
+      "query": "",
+      "fragment": "",
+      "reason": "Incomplete UTF-8 sequence (%E3%81 missing third byte). Some parsers will throw on decoding (e.g., Node.js's decodeURIComponent)."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/%A0",
+      "query": "",
+      "fragment": "",
+      "reason": "%A0 is not valid UTF-8 alone; may cause decoding errors or URIError exceptions in strict parsers."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/%00foo",
+      "query": "",
+      "fragment": "",
+      "reason": "Path includes %00 (null byte), which is dangerous in C-based systems due to string termination."
+    },
+    {
+      "scheme": "http",
+      "authority": "-example.com",
+      "path": "/",
+      "query": "",
+      "fragment": "",
+      "reason": "Host begins with invalid character ('-'). Violates DNS hostname rules, causing parse errors or server-side validation issues."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com:70000",
+      "path": "/",
+      "query": "",
+      "fragment": "",
+      "reason": "Port number exceeds valid TCP range (0–65535). Binding or parsing fails; typically causes an exception or 500 error."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com:abc",
+      "path": "/",
+      "query": "",
+      "fragment": "",
+      "reason": "Non-numeric port ('abc') is invalid. Will typically cause URI parse failure or server-side type error."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/.%2e/%2e%2e/secret",
+      "query": "",
+      "fragment": "",
+      "reason": "Encoded dot-dot traversal. Some servers (e.g., Apache 2.4.49) mishandled this and allowed unauthorized file access (CVE-2021-41773)."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/foo%2fbar",
+      "query": "",
+      "fragment": "",
+      "reason": "Encoded slash (%2f) may be decoded prematurely, causing ambiguous routing or bypassing route validation (e.g., in NGINX)."
+    },
+    {
+      "scheme": "http",
+      "authority": "example.com",
+      "path": "/",
+      "query": "q=%RRfoo",
+      "fragment": "",
+      "reason": "Query contains invalid percent encoding (%RR). Improper handling can cause backend exceptions or 500 errors."
+    }
+  ]
+  

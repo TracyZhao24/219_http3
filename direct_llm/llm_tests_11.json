@@ -1,0 +1,162 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/1/filename%2F%2E%2E%2F",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded '/../' ('%2F%2E%2E%2F') is decoded and normalized (e.g. '/1/filename%2F%2E%2E%2F' → '/1/'):contentReference[oaicite:0]{index=0}, altering the intended path."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo%E2%80%8Bbar",
+    "query": "",
+    "fragment": "",
+    "reason": "Zero-width space (U+200B, %E2%80%8B) is invisible, so '/foo%E2%80%8Bbar' looks like '/foobar' but is a different path:contentReference[oaicite:1]{index=1}, causing mismatches or 404s."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo%5Cbar",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded backslash ('%5C') decodes to a backslash, which many parsers convert to '/':contentReference[oaicite:2]{index=2}, so '/foo%5Cbar' may be treated as '/foo/bar', altering the path."
+  },
+  {
+    "scheme": "htp",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Invalid scheme ('htp' is not a recognized scheme); this should be rejected or cause an error."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:80a",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port '80a' contains a non-numeric character; the authority is malformed and will likely cause a parse error."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:99999",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port '99999' exceeds the maximum (65535); this invalid port may cause a 500 or be rejected."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:-1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Negative port '-1' is invalid and should result in a parsing error."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:0",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port '0' is reserved/invalid in URLs and may not be accepted by the server."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Malformed IPv6 literal (missing closing ']'); authority is invalid and should be rejected."
+  },
+  {
+    "scheme": "http",
+    "authority": "2001:db8::1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Unbracketed IPv6 address in authority is invalid; IPv6 literals must be enclosed in '[' and ']' (this is not)."
+  },
+  {
+    "scheme": "http",
+    "authority": ":80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty hostname with a port (authority \":80\"); missing host is invalid and should cause an error."
+  },
+  {
+    "scheme": "http",
+    "authority": "0127.0.0.1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv4 with leading zeros may be interpreted as octal (e.g. 0127→87):contentReference[oaicite:3]{index=3}, leading to the wrong host."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2E%2E//a",
+    "query": "",
+    "fragment": "",
+    "reason": "Encoded '%2E' sequences are decoded before normalization:contentReference[oaicite:4]{index=4}. '/%2E%2E//a' becomes '/../a' then '/a', altering the route."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/../../../../foo",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple '../' segments beyond the root; some servers collapse these to '/foo' while others may reject the request as a traversal attempt."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/static/article/..%2F..%2Fuser-uploads%2Ffile.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Nginx example: encoded '/../..' after '/static/article' is decoded and the path normalized to '/user-uploads/file.txt':contentReference[oaicite:5]{index=5}, fetching the file from a different location."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/filter1//filter2//filter3/value3",
+    "query": "",
+    "fragment": "",
+    "reason": "Double slashes are collapsed with default Nginx (merge_slashes on):contentReference[oaicite:6]{index=6}, so '/filter1//filter2//' becomes '/filter1/filter2/', changing the route."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo[bar]",
+    "query": "",
+    "fragment": "",
+    "reason": "Illegal '[' character in the path; not allowed by URL syntax and likely causes a parse error."
+  },
+  {
+    "scheme": "http",
+    "authority": ".example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Hostname starting with a dot ('.example.com') has an empty label; this is invalid."
+  },
+  {
+    "scheme": "http",
+    "authority": "example..com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Hostname with consecutive dots ('example..com') contains an empty label; invalid per DNS rules."
+  },
+  {
+    "scheme": "http",
+    "authority": "foo_bar.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Underscore in domain ('foo_bar.com') is not allowed in hostnames."
+  }
+]

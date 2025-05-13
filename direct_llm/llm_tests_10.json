@@ -1,0 +1,194 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/.%2e/%2e%2e/%2e%2e/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Mixing encoded dot-segments (\".%2e\" and \"%2e%2e\") in the path can bypass normalization logic and cause path traversal:contentReference[oaicite:0]{index=0}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e%2e/%2e%2e/%2e%2e/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple \"%2e%2e\" segments in a row test basic traversal filtering after decoding (relative path navigation)."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo%00bar",
+    "query": "",
+    "fragment": "",
+    "reason": "A null byte (%00) in the path may terminate the string in C-based parsers, bypassing filters or causing errors:contentReference[oaicite:1]{index=1}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%C0%AFetc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "The sequence \"%C0%AF\" is an overlong UTF-8 encoding for '/' that bypassed filters in some servers (e.g. IIS):contentReference[oaicite:2]{index=2}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/incomplete%E3",
+    "query": "",
+    "fragment": "",
+    "reason": "A truncated percent-encoding like \"%E3\" (missing one hex digit) is invalid per RFC 3986 and may cause parse errors or be left uninterpreted:contentReference[oaicite:3]{index=3}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/unicode%u1234",
+    "query": "",
+    "fragment": "",
+    "reason": "The \"%u1234\" syntax is not valid percent-encoding in URLs and should be rejected or treated literally."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "//double///slashes",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple successive slashes test if the server collapses them into one or treats them literally, revealing differences in path normalization."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%40name:pass@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoding in userinfo (e.g., \"%40\" for '@') can confuse parsing of authority:contentReference[oaicite:4]{index=4}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:%38%30",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded digits in port (e.g., \"%38%30\" for '80') may not be correctly interpreted, testing port parsing rules:contentReference[oaicite:5]{index=5}."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "A file:// URI references a local file; if misrouted to a web server it should be rejected. Tests handling of non-HTTP schemes."
+  },
+  {
+    "scheme": "ws",
+    "authority": "example.com",
+    "path": "/chat",
+    "query": "",
+    "fragment": "",
+    "reason": "A WebSocket (ws://) scheme sent to a web server checks if the server rejects or ignores unknown protocols."
+  },
+  {
+    "scheme": "foo",
+    "authority": "example.com",
+    "path": "/bar",
+    "query": "",
+    "fragment": "",
+    "reason": "An unknown URI scheme (foo://) tests parser behavior and validation for nonstandard protocols."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::gggg]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Invalid IPv6 address (non-hex characters) in brackets violates IPv6 syntax:contentReference[oaicite:6]{index=6}."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Unterminated IPv6 literal (missing ']') is invalid according to URI syntax and should be rejected."
+  },
+  {
+    "scheme": "http",
+    "authority": "300.300.300.300",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Invalid IPv4 address (octet value out of range) tests numeric host validation."
+  },
+  {
+    "scheme": "http",
+    "authority": "example..com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty domain label (double dot) is not allowed; tests domain name parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%EF%BF%BF",
+    "query": "",
+    "fragment": "",
+    "reason": "Contains Unicode noncharacter U+FFFF (encoded as %EF%BF%BF), which should be rejected or normalized."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%ED%A0%80",
+    "query": "",
+    "fragment": "",
+    "reason": "UTF-8 sequence for U+D800 (surrogate) is invalid; tests that invalid UTF-8 sequences are handled correctly:contentReference[oaicite:7]{index=7}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/caf%C3%A9%20M%E4ller",
+    "query": "",
+    "fragment": "",
+    "reason": "Mixed encodings: '%C3%A9' is UTF-8 for 'é' while '%E4' is ISO-8859-1 'ä'. Tests if server assumes one encoding scheme over another."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir/dir",
+    "query": "",
+    "fragment": "",
+    "reason": "Excessively nested path (many segments) may hit server limits (stack, buffer) or be normalized unexpectedly."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "a=1?b=2",
+    "fragment": "",
+    "reason": "A '?' inside the query string ('a=1?b=2') tests whether the parser treats it as a separator or literal. '?' is reserved:contentReference[oaicite:8]{index=8}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "a=1;b=2",
+    "fragment": "",
+    "reason": "Using ';' as a separator ('a=1;b=2') checks if the server recognizes semicolons as alternate delimiters for query parameters:contentReference[oaicite:9]{index=9}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "a=1&&b=2",
+    "fragment": "",
+    "reason": "Double '&' produces an empty parameter; tests how the server handles empty or missing parameter values."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/doc",
+    "query": "",
+    "fragment": "section#2",
+    "reason": "Multiple '#' characters in fragment ('section#2'): after the first '#', the rest are literal. Tests fragment parsing."
+  }
+]
