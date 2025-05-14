@@ -1,0 +1,37 @@
+[
+    {
+        "test_case": 1,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    }
+]
