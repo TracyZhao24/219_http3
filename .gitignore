@@ -12,3 +12,4 @@ diff_testing/apache/*
 diff_testing/nginx/*
 diff_testing/h2o/*
 diff_testing/caddy/*
+diff_testing/lighttpd/*

@@ -1,0 +1,1325 @@
+[
+    {
+        "test_case": 0,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 0,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 0,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 0,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 0,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": null,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 1,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 2,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 3,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 3,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 3,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 3,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 3,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 4,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 4,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 4,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 4,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 4,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 5,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 6,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 6,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 6,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 6,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 6,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 7,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 7,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 7,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 7,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 7,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 8,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 308,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 10,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 10,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 10,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 10,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 10,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 11,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 11,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 11,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 11,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 11,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 12,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 12,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 12,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 12,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 12,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 13,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 13,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 13,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 13,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 13,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 14,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 14,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 14,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 500,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 14,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 14,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 15,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 403
+    },
+    {
+        "test_case": 15,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 500,
+        "other_status_code": 403
+    },
+    {
+        "test_case": 15,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 403
+    },
+    {
+        "test_case": 15,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 403
+    },
+    {
+        "test_case": 16,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 16,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 16,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 16,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 16,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 17,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 17,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 17,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 17,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 17,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 18,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 18,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 18,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 18,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 18,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 19,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 19,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 19,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 19,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 19,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 20,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 20,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 20,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 20,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 20,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 21,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 21,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 21,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 21,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 21,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 22,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 22,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 25,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 25,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 25,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 25,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 25,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 26,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 200
+    },
+    {
+        "test_case": 26,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 200
+    },
+    {
+        "test_case": 26,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 200
+    },
+    {
+        "test_case": 26,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 200
+    },
+    {
+        "test_case": 27,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 27,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 27,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 27,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 27,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 28,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 28,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 28,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 29,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 29,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 404,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 29,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 500,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 29,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 29,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 31,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 31,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 31,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 31,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 31,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 32,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 32,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 32,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 32,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 32,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 33,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 33,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 33,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 33,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 33,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 34,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 34,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 34,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 34,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 34,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 35,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 35,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 35,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 35,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 35,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 37,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 37,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 37,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 37,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 37,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 38,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 39,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 39,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 39,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 39,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 39,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 40,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 40,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 40,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 40,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 40,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 41,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 41,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 41,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 43,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 43,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 43,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 46,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 46,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 46,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 46,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 46,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 47,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 47,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 48,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 308,
+        "other_status_code": 301
+    },
+    {
+        "test_case": 49,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 49,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 49,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 49,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 49,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 400,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 50,
+        "comparison": "nginx vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 50,
+        "comparison": "apache vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 50,
+        "comparison": "caddy vs h2o",
+        "difference": "status_code",
+        "base_status_code": 200,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 50,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    },
+    {
+        "test_case": 50,
+        "comparison": "lighttpd vs h2o",
+        "difference": "status_code",
+        "base_status_code": 403,
+        "other_status_code": 404
+    }
+]
