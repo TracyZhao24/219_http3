@@ -1,0 +1,106 @@
+[
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/model_fs/B/a/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Tests symbolic link resolution (a -> ../a) followed by path traversal. Checks if server resolves links before or after path traversal."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/model_fs/a/A/b/b.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Tests circular symbolic link (A -> ../B) handling. Checks if server detects loops or follows them indefinitely."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing colon with no port: some servers accept and use default port 80, others consider it malformed. Tests consistency in authority parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com@",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty host after userinfo: tests if server rejects malformed authority or treats @ as part of path."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/model_fs/B/b/../a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Tests path normalization with parent directory traversal (..) that exits the document root. Checks server security."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "//model_fs/B/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Double slash in path: tests if server collapses them or treats as significant (might affect routing)."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/model_fs/B/b/%2e%2e/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded parent directory (..): tests if server decodes before path resolution, potentially bypassing security checks."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1]:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv6 literal with trailing colon but no port: tests if server handles IPv6 literals differently from IPv4 in port parsing."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/model_fs/B/b/a.txt/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing slash on file path: tests if server rejects, ignores, or attempts to serve as directory."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/model_fs/B/b/a.txt",
+    "query": "?/../../a.txt",
+    "fragment": "",
+    "reason": "Query containing path-like elements: tests if server mistakenly interprets query as path component."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/model_fs/B/b/a.txt",
+    "query": "",
+    "fragment": "#/../../a.txt",
+    "reason": "Fragment containing path-like elements: tests if server mistakenly interprets fragment as path component."
+  },
+  {
+    "scheme": "http",
+    "authority": "user@:pass@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple @ in authority: tests if server properly parses userinfo or gets confused by multiple @ signs."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/model_fs/B/b/a.txt%00",
+    "query": "",
+    "fragment": "",
+    "reason": "Null byte in path: tests if server properly sanitizes paths or is vulnerable to null byte injection."
+  }
+]

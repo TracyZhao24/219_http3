@@ -1,0 +1,306 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing colon with no port: some servers accept and use default port 80, others consider it malformed. Tests consistency in authority parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "user:pass:word@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple colons in userinfo: tests if server properly recognizes the last colon as part of userinfo, not a port separator."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:65535",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Maximum valid port number: tests handling of the highest allowed port value."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:0",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Zero port: some servers reject this, others treat it as a special case. RFC doesn't prohibit it."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:65536",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Invalid port (too large): tests if server properly validates port ranges."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:0000000080",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port with leading zeros: tests if server normalizes or rejects."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%40password@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded @ in userinfo: tests proper decoding of percent-encoded characters in sensitive positions."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv6 localhost: tests handling of basic IPv6 literal format."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::ffff:127.0.0.1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv4-mapped IPv6 address: tests handling of mixed format IPv6 addresses."
+  },
+  {
+    "scheme": "http",
+    "authority": "[v1.2001:db8::1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPvFuture format: tests server support for future IP format specifications."
+  },
+  {
+    "scheme": "http",
+    "authority": "xn--bcher-kva.example",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Punycode domain (bücher.example): tests internationalized domain name handling."
+  },
+  {
+    "scheme": "http",
+    "authority": "sub.example.com..",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing dots in domain: tests handling of malformed domain with trailing dots."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "//path",
+    "query": "",
+    "fragment": "",
+    "reason": "Path starting with double slash: tests if server treats it as network path or normalizes it."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path//resource",
+    "query": "",
+    "fragment": "",
+    "reason": "Double slash in middle of path: tests normalization behavior for empty path segments."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/./path/../resource",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with dot segments: tests if server normalizes paths or processes them literally."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path/B/a",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with symlink component (based on provided fs): tests if server follows symlinks or handles them as regular paths."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path/a/A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Complex path with nested symlinks (based on provided fs): tests traversal of multiple symlinks."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path/..",
+    "query": "",
+    "fragment": "",
+    "reason": "Path trying to escape root: tests if server prevents directory traversal attempts."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path/%2e%2e/",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded directory traversal: tests if server decodes before path normalization."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path/%2F",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded slash: tests if server treats it as path separator or literal character."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "key=value&key=different",
+    "fragment": "",
+    "reason": "Duplicate query parameters: tests how server processes query parameters with the same name."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "a=%26&b=%3D",
+    "fragment": "",
+    "reason": "Percent-encoded special characters in query: tests proper decoding of query string."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "q=SELECT+*+FROM+users",
+    "fragment": "",
+    "reason": "SQL-like query parameter: tests input sanitization and SQL injection defenses."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "",
+    "fragment": "fragment#extra",
+    "reason": "Fragment with hash character: tests handling of nested fragment delimiters."
+  },
+  {
+    "scheme": "data",
+    "authority": "",
+    "path": "text/plain;charset=UTF-8,Hello%20World",
+    "query": "",
+    "fragment": "",
+    "reason": "Data URI: tests handling of non-HTTP URI schemes with embedded data."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "File URI to system file: tests if server rejects or handles file scheme URIs securely."
+  },
+  {
+    "scheme": "http+unix",
+    "authority": "%2Ftmp%2Fsocket",
+    "path": "/path",
+    "query": "",
+    "fragment": "",
+    "reason": "Custom scheme with plus and Unix socket path: tests handling of extended schemes and unusual authorities."
+  },
+  {
+    "scheme": "http",
+    "authority": "user:password@[::1]:8080",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Combination of userinfo, IPv6 and port: tests parsing of complex authority components together."
+  },
+  {
+    "scheme": "https",
+    "authority": "example.com:443",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Explicit default port for HTTPS: tests if server normalizes or preserves explicit default ports."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "q=a&q=b&q=c&q=d&q=e&q=f&q=g&q=h&q=i&q=j&q=k&q=l&q=m&q=n&q=o&q=p&q=r&q=s&q=t&q=u&q=v&q=w&q=x&q=y&q=z",
+    "fragment": "",
+    "reason": "Extremely long query string with many parameters: tests query string size limits."
+  },
+  {
+    "scheme": "http",
+    "authority": "a:b@c:29",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Minimal components: tests handling of minimal valid values for each component."
+  },
+  {
+    "scheme": "http",
+    "authority": "127.0.0.1",
+    "path": "/path",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv4 loopback: tests if server allows direct IP access or blocks it."
+  },
+  {
+    "scheme": "http",
+    "authority": "0x7f.0x0.0x0.0x1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Hexadecimal IPv4 notation: tests if server recognizes alternative IP formats."
+  },
+  {
+    "scheme": "http",
+    "authority": "0177.0.0.01",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Octal IPv4 notation: tests if server recognizes alternative IP formats."
+  },
+  {
+    "scheme": "http",
+    "authority": "2130706433",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Decimal IPv4 notation (single integer): tests if server recognizes alternative IP formats."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%00",
+    "query": "",
+    "fragment": "",
+    "reason": "Null byte in path: tests handling of potentially dangerous character encoding."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/",
+    "query": "param=%00value",
+    "fragment": "",
+    "reason": "Null byte in query: tests input sanitization and potential string termination issues."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path/with space/",
+    "query": "",
+    "fragment": "",
+    "reason": "Unencoded space in path: tests handling of invalid characters that should be percent-encoded."
+  }
+]

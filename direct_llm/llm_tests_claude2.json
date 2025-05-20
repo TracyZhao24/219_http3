@@ -1,0 +1,410 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing colon with no port: some servers accept and use default port 80, others consider it malformed. Tests consistency in authority parsing."
+  },
+  {
+    "scheme": "HTTP",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Case sensitivity in scheme: RFC states schemes are case-insensitive, but implementations may differ."
+  },
+  {
+    "scheme": "http",
+    "authority": "user:password@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Userinfo with password: RFC 7230 discourages this, but some servers still accept it while others reject it."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:65536",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port number exceeding valid range (0-65535): may cause integer overflow in some implementations."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:0",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port zero: valid per RFC but often handled differently across implementations."
+  },
+  {
+    "scheme": "http+strange",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Unusual but valid scheme with special characters: may trigger parsing errors in strict implementations."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/.././../",
+    "query": "",
+    "fragment": "",
+    "reason": "Path traversal with dot segments: should be normalized but may be handled differently across implementations."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/./b/../b/%2e%2e/",
+    "query": "",
+    "fragment": "",
+    "reason": "Mixed encoded and unencoded path traversal: tests path normalization consistency."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a",
+    "query": "",
+    "fragment": "",
+    "reason": "Given the file structure, this should resolve to /a via symbolic link, testing proper symlink handling."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Complex symlink resolution: /a/A points to /B, testing how servers handle circular symlink references."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv6 loopback: some servers might not properly handle IPv6 literals."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::ffff:127.0.0.1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv4-mapped IPv6 address: tests dual-stack implementations and potential bypasses for access controls."
+  },
+  {
+    "scheme": "http",
+    "authority": "user@[::1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Userinfo with IPv6 literal: uncommon combination may trigger parsing bugs."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/",
+    "query": "%00",
+    "fragment": "",
+    "reason": "Null byte in query string: may cause string termination issues in C-based servers."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%00",
+    "query": "",
+    "fragment": "",
+    "reason": "Null byte in path: may cause path traversal or premature string termination."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "query": "",
+    "fragment": "",
+    "reason": "Extremely long path: may cause buffer overflows or exceed server limits."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/",
+    "query": "a=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "fragment": "",
+    "reason": "Extremely long query parameter: may cause memory issues or timeouts during parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.a.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Very long domain with many subdomains: tests DNS resolution and header size limitations."
+  },
+  {
+    "scheme": "http",
+    "authority": "%2f%2f127.0.0.1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Double-encoded slashes in authority: may bypass security controls or cause confusion in parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/////",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple consecutive slashes: should normalize to single slash but often handled inconsistently."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "//B//a//",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple slashes with directory traversal: tests path normalization with symbolic links."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:9%30",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded digits in port: should be invalid but might be decoded by some implementations."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e%2e/%2e%2e/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "URL-encoded path traversal: tests handling of encoded dots for directory traversal."
+  },
+  {
+    "scheme": "http",
+    "authority": "127.0.0.1:80\r\nHost: evil.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "CRLF injection attempt: tests HTTP header injection vulnerabilities."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/something%20with spaces",
+    "query": "",
+    "fragment": "",
+    "reason": "Encoded spaces in path: tests inconsistent handling of URL encoding."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "#xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "reason": "Extremely long fragment: may cause parsing issues on some servers."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "/a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "File scheme with absolute path: tests whether server allows accessing local files."
+  },
+  {
+    "scheme": "http",
+    "authority": "@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Authority with @ symbol but no userinfo: tests edge case in authority parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/invalid%percent",
+    "query": "",
+    "fragment": "",
+    "reason": "Invalid percent encoding: tests error handling for malformed encoding sequences."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00%00",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple null bytes in path: may expose memory handling vulnerabilities in C-based servers."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/b/a.txt/../../../../../../../../../etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Deep path traversal through filesystem structure: tests how path resolution handles traversal beyond root."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%40example.org@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "URL-encoded @ in userinfo: tests handling of ambiguous authority parsing with encoded characters."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/",
+    "query": "q=1&q=2&q=3&q=4&q=5&q=6&q=7&q=8&q=9&q=10&q=11&q=12&q=13&q=14&q=15&q=16&q=17&q=18&q=19&q=20&q=21&q=22&q=23&q=24&q=25&q=26&q=27&q=28&q=29&q=30&q=31&q=32&q=33&q=34&q=35&q=36&q=37&q=38&q=39&q=40&q=41&q=42&q=43&q=44&q=45&q=46&q=47&q=48&q=49&q=50&q=51&q=52&q=53&q=54&q=55&q=56&q=57&q=58&q=59&q=60&q=61&q=62&q=63&q=64&q=65&q=66&q=67&q=68&q=69&q=70&q=71&q=72&q=73&q=74&q=75&q=76&q=77&q=78&q=79&q=80&q=81&q=82&q=83&q=84&q=85&q=86&q=87&q=88&q=89&q=90&q=91&q=92&q=93&q=94&q=95&q=96&q=97&q=98&q=99&q=100",
+    "fragment": "",
+    "reason": "Many identical query parameters: tests how servers handle duplicate parameter names."
+  },
+  {
+    "scheme": "https",
+    "authority": "example.com:443:80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple port numbers: technically invalid but might be parsed differently by different servers."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/../../../../../../../",
+    "query": "",
+    "fragment": "",
+    "reason": "Complex symlink traversal that goes beyond root: tests handling of directory traversal with symlinks."
+  },
+  {
+    "scheme": "http",
+    "authority": "foo:bar:baz@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Multiple colons in userinfo: tests how servers interpret the authority component with ambiguous delimiters."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B\\..\\..\\windows\\system32\\cmd.exe",
+    "query": "",
+    "fragment": "",
+    "reason": "Backslash path separators: tests handling of Windows-style paths on web servers."
+  },
+  {
+    "scheme": "gopher",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Obsolete protocol scheme: tests handling of uncommon schemes that might have special historical handling."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/index.php/something%2f..%2f..%2f..%2f..%2fetc%2fpasswd",
+    "query": "",
+    "fragment": "",
+    "reason": "Path traversal after file name: tests servers that might only normalize paths before extension checks."
+  },
+  {
+    "scheme": "http",
+    "authority": "a.example.com@b.example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Domain name in userinfo: confuses hostname parsing and might be interpreted differently across implementations."
+  },
+  {
+    "scheme": "http",
+    "authority": "127.0.0.1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Unbalanced brackets in authority: tests error handling for malformed authority components."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%%32%65%%32%65/%%32%65%%32%65/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Double-encoded path traversal: tests handling of multiple layers of encoding."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/a.txt?../../../etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Path traversal in query: tests whether server mistakenly includes query string in path resolution."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/",
+    "query": "param=value&param=<?php system($_GET['cmd']); ?>",
+    "fragment": "",
+    "reason": "PHP code injection in query parameter: tests handling of potential code execution vulnerabilities."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/index.php",
+    "query": "module=admin&action=add_user&username=attacker&password=password",
+    "fragment": "",
+    "reason": "Administrative action in query: tests access control violations through direct parameter manipulation."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/nonexistent/../a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path traversal through nonexistent directory: tests how path resolution handles traversal from invalid paths."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/../../B/../../",
+    "query": "",
+    "fragment": "",
+    "reason": "Path traversal with mixed real and symbolic paths: tests consistency in path resolution algorithms."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Overlong UTF-8 encoding of '../': tests handling of non-standard character encodings in paths."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/a.txt/..",
+    "query": "",
+    "fragment": "",
+    "reason": "Traversal from a file: tests if server correctly recognizes that traversal should stop at file and not treat it as directory."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:999999999999999999999999999",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Extremely large port number: tests handling of integer overflow in port parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/;/../a/",
+    "query": "",
+    "fragment": "",
+    "reason": "Path parameter injection: tests how servers handle semi-colons in paths which some treat as path parameters."
+  }
+]

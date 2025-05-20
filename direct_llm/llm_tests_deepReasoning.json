@@ -1,0 +1,467 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com:abc",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Non-numeric port 'abc' violates syntax (port must be digits) ; parser should reject or error."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:99999",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Numeric port exceeds valid range (0–65535). RFC grammar defines only digits , so behavior on overflow is ambiguous."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:-1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Negative port is invalid (only digits allowed) ; tests how parser handles the leading '-'."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing ':' with no port number is ambiguous. RFC allows empty port digits , but many parsers treat it as error."
+  },
+  {
+    "scheme": "http",
+    "authority": "@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty userinfo (just '@') is syntactically allowed  but unusual; tests if parser accepts an empty user component."
+  },
+  {
+    "scheme": "http",
+    "authority": "user:@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Username 'user' with empty password (colon but no data). RFC treats this as a blank password ; ensures parser accepts no password after ':'."
+  },
+  {
+    "scheme": "http",
+    "authority": ":pass@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty username with password 'pass'. Tests whether parser interprets ':' as empty userinfo and assigns password correctly."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%40name:pass@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded '@' in userinfo (user%40name → 'user@name') may confuse splitting of userinfo vs host ."
+  },
+  {
+    "scheme": "HTTP",
+    "authority": "Example.COM:80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Uppercase scheme and host; normalization should convert them to lowercase . Tests case-insensitivity of scheme/host."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com::80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Double ':' is invalid (only one ':' for port) ; checks how parser handles an extra colon."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv6 literal missing closing ']'. IPv6 addresses must be enclosed in '[' and ']' ; this should parse as error."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1]80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Missing ':' before port after IPv6 literal. Correct form is '[::1]:80' ; tests improper host/port split."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/a",
+    "query": "",
+    "fragment": "",
+    "reason": "Symlink /a/A→/B, then /B/a→/a; so '/a/A/a' resolves to '/a'. Tests handling of symlink chains mapping to the same file."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/A",
+    "query": "",
+    "fragment": "",
+    "reason": "Symlink /B/a→/a, then /a/A→/B; so '/B/a/A' resolves to '/B'. Ensures consistency of symlink resolution from different entry points."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/a/A",
+    "query": "",
+    "fragment": "",
+    "reason": "Circular symlink: /a/A→/B→/a→/B... This can loop. Tests if parser detects and handles cyclic symlink references."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../a",
+    "query": "",
+    "fragment": "",
+    "reason": "Combines symlink and '..': '/a/A'→'/B', then '/B/../a'→'/a'. Checks correct order of symlink resolution vs dot-segment removal."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/../a",
+    "query": "",
+    "fragment": "",
+    "reason": " '/B/a'→'/a', then '/../a' from '/a' stays at '/a'. Tests '..' handling after following a symlink."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../B",
+    "query": "",
+    "fragment": "",
+    "reason": " '/a/A'→'/B', then '/../B' yields '/B'. Ensures '../' is applied after symlink expansion."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/../../a",
+    "query": "",
+    "fragment": "",
+    "reason": "Too many '..': '/a/..'→'/', further '..' stays at root , ending at '/a'. Checks that traversal does not escape root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/../etc",
+    "query": "",
+    "fragment": "",
+    "reason": "Leading '..' from root is ignored , normalizing to '/etc'. Tests that servers block escaping above root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/./A",
+    "query": "",
+    "fragment": "",
+    "reason": "Removes '/./': yields '/a/A'→'/B'. Tests that '.' segments are removed before symlink resolution ."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/.",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing '.': removed, leaving '/a/A'→'/B'. Ensures trailing dot is handled correctly."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/.",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing '.': removed, leaving '/B/a'→'/a'. Tests '.' handling after entering a symlinked path."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/./b/./c",
+    "query": "",
+    "fragment": "",
+    "reason": "Intermediate '.' segments should be removed , yielding '/a/b/c'."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo//bar/",
+    "query": "",
+    "fragment": "",
+    "reason": "Repeated slashes should compress to single '/' (e.g. '/foo/bar/') according to normalization rules."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo/../../etc",
+    "query": "",
+    "fragment": "",
+    "reason": "Excessive '../': '/foo/..'→'/', further '..' stays at root ; prevents escape above root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/.",
+    "query": "",
+    "fragment": "",
+    "reason": "Single '.' should resolve to '/', normalizing to the root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e%2e/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Encoded '..': '%2e%2e/' decodes to '../' , a known traversal pattern. Tests handling of encoded path segments."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2E%2E/bar",
+    "query": "",
+    "fragment": "",
+    "reason": "Uppercase percent-encoding: '%2E%2E' also decodes to '..'. Ensures case-insensitive handling of percent-encoded segments."
+    },
+  {
+    "scheme": "http",
+    "authority": "example.com:abc",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Non-numeric port 'abc' violates syntax (port must be digits) ; parser should reject or error."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:99999",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Numeric port exceeds valid range (0–65535). RFC grammar defines only digits , so behavior on overflow is ambiguous."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:-1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Negative port is invalid (only digits allowed) ; tests how parser handles the leading '-'."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing ':' with no port number is ambiguous. RFC allows empty port digits , but many parsers treat it as error."
+  },
+  {
+    "scheme": "http",
+    "authority": "@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty userinfo (just '@') is syntactically allowed  but unusual; tests if parser accepts an empty user component."
+  },
+  {
+    "scheme": "http",
+    "authority": "user:@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Username 'user' with empty password (colon but no data). RFC treats this as a blank password ; ensures parser accepts no password after ':'."
+  },
+  {
+    "scheme": "http",
+    "authority": ":pass@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty username with password 'pass'. Tests whether parser interprets ':' as empty userinfo and assigns password correctly."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%40name:pass@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Percent-encoded '@' in userinfo (user%40name → 'user@name') may confuse splitting of userinfo vs host ."
+  },
+  {
+    "scheme": "HTTP",
+    "authority": "Example.COM:80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Uppercase scheme and host; normalization should convert them to lowercase . Tests case-insensitivity of scheme/host."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com::80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Double ':' is invalid (only one ':' for port) ; checks how parser handles an extra colon."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "IPv6 literal missing closing ']'. IPv6 addresses must be enclosed in '[' and ']' ; this should parse as error."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1]80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Missing ':' before port after IPv6 literal. Correct form is '[::1]:80' ; tests improper host/port split."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/a",
+    "query": "",
+    "fragment": "",
+    "reason": "Symlink /a/A→/B, then /B/a→/a; so '/a/A/a' resolves to '/a'. Tests handling of symlink chains mapping to the same file."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/A",
+    "query": "",
+    "fragment": "",
+    "reason": "Symlink /B/a→/a, then /a/A→/B; so '/B/a/A' resolves to '/B'. Ensures consistency of symlink resolution from different entry points."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/a/A",
+    "query": "",
+    "fragment": "",
+    "reason": "Circular symlink: /a/A→/B→/a→/B... This can loop. Tests if parser detects and handles cyclic symlink references."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../a",
+    "query": "",
+    "fragment": "",
+    "reason": "Combines symlink and '..': '/a/A'→'/B', then '/B/../a'→'/a'. Checks correct order of symlink resolution vs dot-segment removal."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/../a",
+    "query": "",
+    "fragment": "",
+    "reason": " '/B/a'→'/a', then '/../a' from '/a' stays at '/a'. Tests '..' handling after following a symlink."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../B",
+    "query": "",
+    "fragment": "",
+    "reason": " '/a/A'→'/B', then '/../B' yields '/B'. Ensures '../' is applied after symlink expansion."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/../../a",
+    "query": "",
+    "fragment": "",
+    "reason": "Too many '..': '/a/..'→'/', further '..' stays at root , ending at '/a'. Checks that traversal does not escape root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/../etc",
+    "query": "",
+    "fragment": "",
+    "reason": "Leading '..' from root is ignored , normalizing to '/etc'. Tests that servers block escaping above root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/./A",
+    "query": "",
+    "fragment": "",
+    "reason": "Removes '/./': yields '/a/A'→'/B'. Tests that '.' segments are removed before symlink resolution ."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/.",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing '.': removed, leaving '/a/A'→'/B'. Ensures trailing dot is handled correctly."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/.",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing '.': removed, leaving '/B/a'→'/a'. Tests '.' handling after entering a symlinked path."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/./b/./c",
+    "query": "",
+    "fragment": "",
+    "reason": "Intermediate '.' segments should be removed , yielding '/a/b/c'."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo//bar/",
+    "query": "",
+    "fragment": "",
+    "reason": "Repeated slashes should compress to single '/' (e.g. '/foo/bar/') according to normalization rules."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo/../../etc",
+    "query": "",
+    "fragment": "",
+    "reason": "Excessive '../': '/foo/..'→'/', further '..' stays at root ; prevents escape above root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/.",
+    "query": "",
+    "fragment": "",
+    "reason": "Single '.' should resolve to '/', normalizing to the root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e%2e/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Encoded '..': '%2e%2e/' decodes to '../' , a known traversal pattern. Tests handling of encoded path segments."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2E%2E/bar",
+    "query": "",
+    "fragment": "",
+    "reason": "Uppercase percent-encoding: '%2E%2E' also decodes to '..'. Ensures percent-encoding is case-insensitive and properly decoded."
+  }
+]
+

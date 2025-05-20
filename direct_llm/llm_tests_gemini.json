@@ -1,0 +1,370 @@
+[
+  {
+    "scheme": "HTTP",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Scheme with uppercase letters: RFC 3986 states schemes are case-insensitive and should be normalized to lowercase. This tests server's adherence to case normalization."
+  },
+  {
+    "scheme": "hTtP",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Scheme with mixed-case letters: Further tests server's adherence to case normalization for schemes, ensuring consistent handling."
+  },
+  {
+    "scheme": "http+s.web-app",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Scheme with all allowed special characters (+, ., -): This tests the server's ability to parse schemes containing valid non-alphanumeric characters as per ABNF."
+  },
+  {
+    "scheme": "http",
+    "authority": "user:pass@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Userinfo with username and password: This tests how servers handle the deprecated user:password syntax in userinfo. Some servers might strip it, others might log it, potentially exposing sensitive information."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%3Apass%40info@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Userinfo with percent-encoded colon and at-sign: This tests the server's decoding of percent-encoded characters within the userinfo component, which could be misinterpreted as delimiters if not handled correctly."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%253Apass%2540info@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Userinfo with double percent-encoded colon and at-sign: This tests the server's handling of double-encoded characters, which could bypass single-pass decoding filters if not re-decoded."
+  },
+  {
+    "scheme": "http",
+    "authority": "user!$&'()*+,;=@example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Userinfo with all allowed sub-delims and colon: This tests server's robust parsing of userinfo containing a full set of valid special characters as per ABNF."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as compressed IPv6 loopback address: This tests the server's ability to correctly parse and resolve standard compressed IPv6 literals."
+  },
+  {
+    "scheme": "http",
+    "authority": "[2001:0db8:85a3:0000:0000:8a2e:0370:7334]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as full IPv6 address: This tests the server's ability to correctly parse and resolve a complete, uncompressed IPv6 literal."
+  },
+  {
+    "scheme": "http",
+    "authority": "[::ffff:192.0.2.1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as IPv4-mapped IPv6 address: This tests server's handling of IPv4-mapped IPv6 addresses, which combine IPv6 and IPv4 notation, verifying proper parsing and potential resolution."
+  },
+  {
+    "scheme": "http",
+    "authority": "[vF.foo]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as IPvFuture address: This tests server's support for future IP address formats as defined in RFC 3986, ensuring forward compatibility."
+  },
+  {
+    "scheme": "http",
+    "authority": "0.0.0.0",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as IPv4 'all zeros' address: This tests server's handling of the unspecified IPv4 address, which might be treated differently by some systems (e.g., binding to all interfaces)."
+  },
+  {
+    "scheme": "http",
+    "authority": "255.255.255.255",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as IPv4 'broadcast' address: This tests server's handling of the broadcast IPv4 address, which might have specific network or security implications."
+  },
+  {
+    "scheme": "http",
+    "authority": "192.168.001.010",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as IPv4 with leading zeros in octets: RFC 3986 disallows leading zeros for octets > 9, but some parsers might be lenient, potentially leading to security issues if interpreted as octal (e.g., 010 being 8)."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com.",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host with trailing dot: Some servers might normalize this by removing the dot (valid FQDN), others might treat it as a distinct or invalid host, leading to inconsistency."
+  },
+  {
+    "scheme": "http",
+    "authority": "xn--bcher-kva.example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Host as Punycode (IDN): This tests server's ability to correctly handle Internationalized Domain Names encoded in Punycode, ensuring proper routing and SSL certificate validation."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:0",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port as zero: Port 0 is reserved. This tests how servers handle this, as it might be treated as invalid, default, or cause unexpected behavior."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:65535",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port as maximum valid port number: This tests server's handling of the highest possible 16-bit port number, ensuring no overflow or parsing errors."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port as default HTTP port: RFC 3986 suggests default ports can be removed for normalization. This tests if the server normalizes this, affecting caching and logging."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:abc",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Port as non-numeric string: This tests the server's validation of the port component; it should be rejected as invalid, but lenient parsers might cause issues."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "reason": "Trailing colon with no port: Some servers accept this and use default port 80, others consider it malformed or invalid. This tests consistency in authority parsing."
+  },
+  {
+    "scheme": "http",
+    "authority": "",
+    "path": "///path",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty authority with triple slash path: RFC 3986 allows empty authority, but the path cannot begin with two slashes if the authority is absent. This tests strict RFC compliance versus lenient parsing, which could lead to unexpected resource resolution."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "",
+    "query": "",
+    "fragment": "",
+    "reason": "Empty path: RFC 3986 states path is mandatory but can be empty. Servers often treat this as '/'. This tests normalization to the root path."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/././path",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with redundant single dot segments: This tests server's path normalization (removal of '/./' segments) as per RFC 3986 Section 5.2.4."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path/../another",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with 'dot-dot' segment: This tests server's path normalization (resolution of '/../') as per RFC 3986 Section 5.2.4, ensuring correct directory traversal handling."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/../../../../etc/passwd",
+    "query": "",
+    "fragment": "",
+    "reason": "Path traversal attempt with excessive 'dot-dot' segments: This is a critical security test for server's measures against directory traversal, ensuring paths don't escape the configured web root and access sensitive files."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path//another///segment",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with multiple consecutive slashes: This tests server's path normalization (merging of redundant slashes) as per RFC 3986 Section 6.2.2.3."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path%2Fto%2Ffile",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with percent-encoded slash (%2F): This tests server's handling of encoded slashes. Some servers decode them, while others treat them as literal characters, leading to path confusion or security bypasses."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path%252Fto%252Ffile",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with double percent-encoded slash (%252F): This tests server's handling of double-encoded characters, a common technique to bypass poorly implemented security filters that only decode once."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path%00file.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with null byte (%00): This tests server's vulnerability to null byte injection, where the null byte can truncate the path string after decoding, bypassing security checks and accessing unintended files."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/b.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with symbolic link (B/a -> ../a): This tests server's resolution of symbolic links and relative path segments within the provided file system structure. Expected to resolve to `/a/b/b.txt` on the actual file system."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with nested symbolic link (a/A -> ../B): This tests server's resolution of nested symbolic links and relative path segments. Expected to resolve to `/B/b/a.txt` on the actual file system."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/../b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with symbolic link and 'dot-dot' segment: This tests the order of operations for symlink resolution and dot-segment removal. Incorrect order can lead to unexpected resource access or traversal issues."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/../../a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path traversal through symbolic link: This tests if the server correctly resolves symlinks and then applies dot-segments, preventing unintended directory access outside the web root or intended path."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/%61/b.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with percent-encoded symbolic link segment: This tests if the server correctly decodes percent-encoded characters before attempting to resolve symbolic links. Failure to decode can lead to 'file not found' or bypass issues."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/nonexistent_symlink/file.txt",
+    "query": "",
+    "fragment": "",
+    "reason": "Path with non-existent symbolic link: This tests server's error handling for broken or invalid symbolic links, expecting a 404 or similar error, and ensuring no information disclosure."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "?",
+    "fragment": "",
+    "reason": "Empty query string with '?' delimiter: This tests if the server correctly interprets an empty query component, distinguishing it from no query component at all."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "key=value&another_key=",
+    "fragment": "",
+    "reason": "Query with empty value parameter: This tests server's handling of parameters with no assigned value, ensuring consistent parsing (e.g., `another_key` recognized but with an empty string value)."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "key1=value1&key1=value2",
+    "fragment": "",
+    "reason": "Query with duplicate keys: This tests how servers handle multiple parameters with the same key (e.g., parsing into an array, taking the first value, or taking the last value)."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "param=!$&'()*+,;=:@/?",
+    "fragment": "",
+    "reason": "Query with all allowed special characters: This tests server's robust parsing of query parameters containing a full set of valid special characters as per ABNF, ensuring they are not misinterpreted."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "param=%26%3D%3F%2F",
+    "fragment": "",
+    "reason": "Query with percent-encoded reserved characters: This tests server's decoding of percent-encoded characters that are reserved in other URI parts (like '&', '=', '?', '/'), ensuring they are treated as data in the query."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "param=%2526%253D",
+    "fragment": "",
+    "reason": "Query with double percent-encoded characters: This tests server's handling of double-encoded characters in the query string, verifying if they are properly decoded or if filters can be bypassed."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "",
+    "fragment": "#",
+    "reason": "Empty fragment string with '#' delimiter: This tests if the fragment component is correctly recognized as empty, though fragments are typically client-side and not sent to the server."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "",
+    "fragment": "#section!$&'()*+,;=:@/?",
+    "reason": "Fragment with all allowed special characters: This tests client-side (and potential server-side logging/analytics) handling of fragments with a full set of valid special characters."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "",
+    "fragment": "#section%23encoded",
+    "reason": "Fragment with percent-encoded hash (%23): This tests client-side handling of percent-encoded characters within the fragment, ensuring they are correctly decoded for navigation."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/path",
+    "query": "",
+    "fragment": "#section%2523double",
+    "reason": "Fragment with double percent-encoded hash (%2523): This tests client-side handling of double-encoded characters in the fragment, verifying if they are properly decoded for navigation."
+  }
+]
