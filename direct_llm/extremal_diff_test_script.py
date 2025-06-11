@@ -4,6 +4,8 @@ from concurrent.futures import ThreadPoolExecutor
 import docker
 import os
 import argparse
+import re
+from urllib.parse import unquote
 
 DIFF_TESTING = "../diff_testing"
 CONTAINER_PORT = 80
@@ -60,6 +62,64 @@ def stop_and_remove_containers(containers):
         print(f"Stopped and removed container {container.name}")
 
 
+# preprocesser
+def is_valid_uri_test_case(test_case):
+    """
+    Returns True if the test case satisfies URI validity constraints, else False.
+    """
+    # Extract fields
+    scheme = test_case.get("scheme", "")
+    authority = test_case.get("authority", "")
+    path = test_case.get("path", "")
+    query = test_case.get("query", "")
+    fragment = test_case.get("fragment", "")
+
+    # 1. Scheme must be http or https
+    if scheme not in {"http", "https"}:
+        return False
+
+    # 2. Authority must be a non-empty valid hostname (basic check)
+    if not authority or not re.match(r"^[a-zA-Z0-9.-]+(:[0-9]+)?$", authority):
+        return False
+
+    # 3. Path must start with /
+    if not path.startswith("/"):
+        return False
+
+    # 4. Check for invalid percent-encoding
+    if re.search(r"%(?![0-9A-Fa-f]{2})", path + query + fragment):
+        return False
+
+    # 5. Decoded path must not contain null bytes or control characters
+    try:
+        decoded_path = unquote(path)
+    except Exception:
+        return False
+    if '\x00' in decoded_path or any(ord(c) < 32 for c in decoded_path):
+        return False
+
+    # 6. Path length limit (conservative upper bound used by some servers, e.g., 2048)
+    if len(path) > 2048:
+        return False
+
+    # 7. Prevent directory traversal beyond root (e.g., /../../..)
+    segments = path.split('/')
+    depth = 0
+    for seg in segments:
+        if seg == "..":
+            depth -= 1
+        elif seg and seg != ".":
+            depth += 1
+    if depth < 0:
+        return False
+
+    # 8. Reject unescaped reserved characters in path
+    if re.search(r"[ \t\r\n?#]", path):  # Unescaped space, tab, newline, ?, #
+        return False
+
+    return True
+
+
 # Send HTTP GET request for each URI
 def send_http1_get_requests(baseURL, file_paths, base_log_file):
     test_cases = []
@@ -71,6 +131,11 @@ def send_http1_get_requests(baseURL, file_paths, base_log_file):
     # Create a HTTP client session
     with httpx.Client(base_url=baseURL, http1=True) as client:
         for i, obj in enumerate(test_cases):
+            # validate each test case
+            if not is_valid_uri_test_case(obj):
+                print(f"Invalid test case {i}: {obj}")
+                continue
+
             # Build the full path + query (ignore fragment)
             full_path = obj["path"]
             authority = obj["authority"]
