@@ -6,8 +6,7 @@
     "query": "",
     "fragment": "",
     "reason": "Scheme with uppercase letters: RFC 3986 states schemes are case-insensitive and should be normalized to lowercase. This tests server's adherence to case normalization."
-  },
-  {
+  },{
     "scheme": "hTtP",
     "authority": "example.com",
     "path": "/",

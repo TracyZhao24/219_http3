@@ -4,6 +4,7 @@
 *.bc
 *.cache
 .DS_Store
+*/DS_Store
 
 test_cases/test*
 test_cases/klee*
@@ -13,3 +14,4 @@ diff_testing/nginx/*
 diff_testing/h2o/*
 diff_testing/caddy/*
 diff_testing/lighttpd/*
+
