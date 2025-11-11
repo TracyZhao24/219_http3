@@ -57,6 +57,19 @@ def parse_log_file(log_path):
 
     return data
 
+def append_with_all_responses(difference_list, test_case_idx, responses_by_server, field="status_code"):
+    """
+    Appends to difference_list the results for all servers
+    for a given test case index.
+    """
+    status_summary = {
+        "test_case": test_case_idx,
+        field: {}
+    }
+    for server, response in responses_by_server.items():
+        status_summary[field][server] = response
+    
+    difference_list.append(status_summary)
 
 def compare_logs_in_subfolders(output_file, subfolder):
     """
@@ -108,8 +121,6 @@ def compare_logs_in_subfolders(output_file, subfolder):
             else:
                 print(f"{server} has no test #{idx} log file")
                 results_for_idx[server] = None
-        
-        
 
         # Compare each server pair
         server_names = list(server_dirs.keys())
@@ -125,31 +136,29 @@ def compare_logs_in_subfolders(output_file, subfolder):
 
             # Compare status codes
             if base_data['status_code'] != other_data['status_code']:
-                differences.append({
-                    "test_case": idx,
-                    "comparison": f"{base} vs {other}",
-                    "difference": "status_code",
-                    "base_status_code": base_data['status_code'],
-                    "other_status_code": other_data['status_code']
-                })
-                # print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                #       f"status {base_data['status_code']} != {other_data['status_code']}")
+                append_with_all_responses(
+                    differences,
+                    idx,
+                    {
+                        server: results_for_idx[server]['status_code'] for server in server_dirs
+                    }
+                )
+                break
 
             # If both are success codes, compare resolved_uri
+            
             if (base_data['status_code'] and base_data['status_code'] < 400 and
                 other_data['status_code'] and other_data['status_code'] < 400):
                 if base_data['resolved_uri'] != other_data['resolved_uri']:
-                    differences.append({
-                        "test_case": idx,
-                        "comparison": f"{base} vs {other}",
-                        "difference": "resolved_uri",
-                        "base_resolved_uri": base_data['resolved_uri'],
-                        "other_resolved_uri": other_data['resolved_uri']
-                    })
-                    # print(f"[DIFF] Test#{idx} {base} vs {other}: "
-                    #       f"resolved_uri mismatch\n"
-                    #       f"  {base}: {base_data['resolved_uri']}\n"
-                    #       f"  {other}: {other_data['resolved_uri']}")
+                    append_with_all_responses(
+                        differences,
+                        idx,
+                        {
+                            server: results_for_idx[server]['resolved_uri'] for server in server_dirs
+                        },
+                        field="resolved_uri"
+                    )
+                    break 
     
     with open(output_file, 'w', encoding="utf-8") as output:
         json.dump(differences, output, indent=4)
