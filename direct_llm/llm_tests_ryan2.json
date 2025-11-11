@@ -257,7 +257,7 @@
     "fragment": "",
     "expected": "200 or 403",
     "normalized_path": "/B/b/a.txt",
-    "reason": "RFC 3986 §5.2.4: percent-encoded \"..\" segments (\\"%2e%2e\\") decode and remove: \"/%2e%2e/%2e%2e/%2e%2e/B/b/a.txt\" → \"/B/b/a.txt\"."
+    "reason": "RFC 3986 §5.2.4: percent-encoded \"..\" segments (\\\"%2e%2e\\\") decode and remove: \"/%2e%2e/%2e%2e/%2e%2e/B/b/a.txt\" → \"/B/b/a.txt\"."
   },
   {
     "scheme": "http",

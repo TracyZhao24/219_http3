@@ -1,4 +1,4 @@
-# Generate Test Cases
+# Klee Test Generation (old)
 
 1. Start Klee docker container
 ```
@@ -12,12 +12,13 @@ The output directory needs to be a directory that Klee creates, it cannot alread
 
 5. To see the outputs, run ```ktest-tool [output-directory]/test######.ktest```
 
-# Formatting the Test Cases
+## Formatting the Test Cases
 We wrote a python script to scrape the `ktest-tool` outputs into a json file. To run it, you have to be in the klee container. 
 
-# Differential Testing
+# Manual Differential Testing
 
-# Making a Dockerfile for one HTTP Implementation: [nginx](https://hub.docker.com/_/nginx) Docker image
+## Making a Dockerfile for one HTTP Implementation: 
+[nginx](https://hub.docker.com/_/nginx) Docker image
 
 1. Create a Dockerfile in the directory of your local testing filesystem. If you can an official image maintained on Docker Hub, you can get by with this: 
 ```
@@ -34,7 +35,7 @@ docker run --name {container-name} -d -p 8080:80 {tag}
 
 3. Then you can hit http://localhost:8080 or http://host-ip:8080 in your browser.
 
-# Running the Differential Testing Script
+## Running the Differential Testing Script
 Run the `differential_test_script.py` script with a list of files containing your test cases and the name of the subdirectory you would like your log files to be written to.
 ```
 python3 differential_test_script.py --test_files ./diff_testing/fs_relative_paths.json ./test_cases/clean_tests/test1.json --log_dir varied_fs_bases
@@ -44,4 +45,9 @@ python3 differential_test_script.py --test_files ./diff_testing/fs_relative_path
 Run the `response_comparison.py` script with the name of the subdirectory you wrote your log files to during the testing and an output file to write the results of the comparison to.
 ```
 python3 ./diff_testing/response_comparison.py --results_dir varied_fs_bases --output_file diff_results_varied_fs_bases.json
+```
+# Streamlined Differential Testing
+Run the following command:
+```bash
+run_differential_test.sh [test_file_name]
 ```
