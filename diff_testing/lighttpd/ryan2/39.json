@@ -1,0 +1,4 @@
+Test case 39: http://example.com/a.txt?Q=VaLuE
+Request to http://example.com/a.txt?Q=VaLuE returned error: 404
+Resolved URL: http://localhost:8084/a.txt?Q=VaLuE
+

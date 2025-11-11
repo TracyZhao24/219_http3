@@ -1,0 +1,4 @@
+Test case 35: http://Example.com/A/B/a.TXT
+Request to http://Example.com/A/B/a.TXT returned error: 404
+Resolved URL: http://localhost:8080/A/B/a.TXT
+

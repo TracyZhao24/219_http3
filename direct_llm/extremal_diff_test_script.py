@@ -99,6 +99,8 @@ def is_valid_uri_test_case(test_case):
         return False
 
     # 6. Path length limit (conservative upper bound used by some servers, e.g., 2048)
+    # TODO: why is this here??? It seems we want to test long paths (extremal)
+    # to see if the server handles them correctly
     if len(path) > 2048:
         return False
 
@@ -134,7 +136,7 @@ def send_http1_get_requests(baseURL, file_paths, base_log_file):
             # validate each test case
             if not is_valid_uri_test_case(obj):
                 print(f"Invalid test case {i}: {obj}")
-                continue
+                # continue
 
             # Build the full path + query (ignore fragment)
             full_path = obj["path"]

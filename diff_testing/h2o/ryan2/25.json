@@ -1,0 +1,4 @@
+Test case 25: http://example.com/%2e/%2e/%2e/etc/passwd
+Request to http://example.com/%2e/%2e/%2e/etc/passwd returned error: 404
+Resolved URL: http://localhost:8083/%2e/%2e/%2e/etc/passwd
+

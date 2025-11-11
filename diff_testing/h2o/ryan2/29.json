@@ -1,0 +1,4 @@
+Test case 29: http://example.com/a/A/../a/b/a.txt
+Request to http://example.com/a/A/../a/b/a.txt returned error: 404
+Resolved URL: http://localhost:8083/a/a/b/a.txt
+

@@ -5,13 +5,12 @@
 *.cache
 .DS_Store
 */DS_Store
+.vscode/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
 
 test_cases/test*
 test_cases/klee*
-
-diff_testing/apache/*
-diff_testing/nginx/*
-diff_testing/h2o/*
-diff_testing/caddy/*
-diff_testing/lighttpd/*
 

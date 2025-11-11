@@ -1,0 +1,4 @@
+Test case 42: http://user:passwd@localhost/a/b.txt
+Request to http://user:passwd@localhost/a/b.txt returned error: 400
+Resolved URL: http://localhost:8081/a/b.txt
+

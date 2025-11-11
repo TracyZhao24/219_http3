@@ -1,4 +1,0 @@
-Test case 1: http://localhost:8080/B/a.txt/a/b.txt/a.txt/B
-Request to http://localhost:8080/B/a.txt/a/b.txt/a.txt/B returned error: 404
-Resolved URL: http://localhost:8080/B/a.txt/a/b.txt/a.txt/B
-

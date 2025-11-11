@@ -1,0 +1,4 @@
+Test case 17: file://///a/b/a.txt
+Request to file://///a/b/a.txt returned error: 400
+Resolved URL: http://localhost:8081///a/b/a.txt
+

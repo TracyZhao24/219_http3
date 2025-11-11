@@ -1,0 +1,4 @@
+Test case 38: http://example.com/%41/%61/%2d/%2e/%5f
+Request to http://example.com/%41/%61/%2d/%2e/%5f returned error: 404
+Resolved URL: http://localhost:8082/%41/%61/%2d/%2e/%5f
+

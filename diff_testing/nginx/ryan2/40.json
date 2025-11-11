@@ -1,0 +1,13 @@
+Test case 40: http://example.com/index.html
+Request to http://example.com/index.html completed with status code: 200
+Resolved URI: http://localhost:8080/index.html
+Response content from http://example.com/index.html: <!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+html { color-scheme: light dark; }
+body { width: 35em; margin: 0 auto;
+font-family: Tahoma, Verdana, Arial, sans-serif; }
+</style
+

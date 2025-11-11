@@ -1,0 +1,425 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_scheme": "http",
+    "reason": "RFC 3986 §3.1: scheme names must begin with a letter (A-Z or a-z) and may contain letters, digits, '+', '-', or '.', and are case-insensitive:contentReference[oaicite:15]{index=15}"
+  },
+  {
+    "scheme": "HTTP",
+    "authority": "example.com",
+    "path": "/B/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_scheme": "http",
+    "reason": "RFC 3986 §3.1: uppercase scheme letters are equivalent to lowercase (server should accept \"HTTP\" as \"http\"):contentReference[oaicite:16]{index=16}"
+  },
+  {
+    "scheme": "1http",
+    "authority": "example.com",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.1: scheme must start with a letter; here '1http' violates the ABNF (starts with digit)"
+  },
+  {
+    "scheme": "h_ttp",
+    "authority": "example.com",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.1: scheme contains '_' which is not in (ALPHA / DIGIT / '+' / '-' / '.'):contentReference[oaicite:17]{index=17}"
+  },
+  {
+    "scheme": "a",
+    "authority": "example.com",
+    "path": "/b.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.1: minimal scheme of one letter is allowed (here 'a')"
+  },
+  {
+    "scheme": "http",
+    "authority": "User:Pass@example.com",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §3.2.1: userinfo (\"User:Pass\") is allowed before '@'.  Password in cleartext is deprecated:contentReference[oaicite:18]{index=18}; servers may ignore or reject it."
+  },
+  {
+    "scheme": "http",
+    "authority": "User@example.com",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.2.1: userinfo without ':' (no password) is allowed (only username). Server should serve /a.txt normally."
+  },
+  {
+    "scheme": "http",
+    "authority": "@example.com",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "400 or 403",
+    "reason": "RFC 3986 §3.2.1: userinfo must precede '@'. An empty userinfo ('@example.com') is syntactically valid (userinfo empty), but servers often reject it."
+  },
+  {
+    "scheme": "http",
+    "authority": "EXAMPLE.COM",
+    "path": "/b/b.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/b/b.txt",
+    "normalized_scheme": "http",
+    "reason": "RFC 3986 §6.2.2.1: host is case-insensitive and should be lowercased ('EXAMPLE.COM' normalized to 'example.com')."
+  },
+  {
+    "scheme": "http",
+    "authority": "localhost:80",
+    "path": "/a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a/b/a.txt",
+    "normalized_scheme": "http",
+    "reason": "RFC 3986 §6.2.3: explicit default port '80' can be removed in normalization (normalize to no port):contentReference[oaicite:19]{index=19}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:81",
+    "path": "/a/b/b.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.2.3: non-default port '81' is allowed.  Server will attempt to connect on port 81."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:abc",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2.3: port must be digits only (\"abc\" is invalid)"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 400",
+    "reason": "RFC 3986 §3.2.3: grammar allows empty port, but normalizers should omit ':' if port is empty:contentReference[oaicite:20]{index=20}; some servers may treat this as invalid."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:80/",
+    "path": "",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/",
+    "reason": "RFC 3986 §6.2.3: an empty path with authority should normalize to '/' (and remove default port):contentReference[oaicite:21]{index=21}."
+  },
+  {
+    "scheme": "http",
+    "authority": ":80",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2: missing host (only ':80') is invalid for http scheme:contentReference[oaicite:22]{index=22}."
+  },
+  {
+    "scheme": "http",
+    "authority": "",
+    "path": "/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2: http URI with no authority (e.g. \"http:a.txt\") is missing '//' and host; this is not an absolute-URI:contentReference[oaicite:23]{index=23}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "//a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "//a/b/a.txt",
+    "reason": "RFC 3986 §3.3: with authority present, path may begin with '//' (empty first segment), treated as a segment with empty name."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "///a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a/b/a.txt",
+    "reason": "RFC 3986 §3.3: file scheme treats empty authority (authority missing) specially. Here 'file:///' means local host and '/a/b/a.txt' path:contentReference[oaicite:24]{index=24}."
+  },
+  {
+    "scheme": "file",
+    "authority": "",
+    "path": "//a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "400 or 404",
+    "reason": "RFC 3986 §3.3: without authority, path cannot begin with '//' (treated as authority); 'file://a/b/a.txt' is syntax error."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/./a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a.txt",
+    "reason": "RFC 3986 §5.2.4: path segments '.' are removed by dot-segment normalization (\"/./a.txt\" → \"/a.txt\"):contentReference[oaicite:25]{index=25}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/./b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a/b/a.txt",
+    "reason": "RFC 3986 §5.2.4: internal '.' segment removed (\"/a/./b/a.txt\" → \"/a/b/a.txt\")."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/../a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 403",
+    "normalized_path": "/a.txt",
+    "reason": "RFC 3986 §5.2.4: leading '..' drops above root to '/', so \"/../a.txt\" → \"/a.txt\".  Access may be denied if outside root."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/../b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/b/a.txt",
+    "reason": "RFC 3986 §5.2.4: \"..\" removes preceding segment (\"/a/../b/a.txt\" → \"/b/a.txt\")."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/..b/b.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a/..b/b.txt",
+    "reason": "RFC 3986 §5.2.4: segment \"..b\" is not equal to \"..\", so it is not removed."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/../b/.././a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a.txt",
+    "reason": "RFC 3986 §5.2.4: iterative removal: \"/a/../b/.././a.txt\" → \"/a.txt\"."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e/%2e/%2e/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 403",
+    "normalized_path": "/etc/passwd",
+    "reason": "RFC 3986 §5.2.4: percent-encoded dot \"%2e\" decodes to \".\".  The sequence \"/%2e/%2e/%2e/\" → \"/../../../\" → \"/etc/passwd\" by dot removal."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e%2e/%2e%2e/%2e%2e/B/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 403",
+    "normalized_path": "/B/b/a.txt",
+    "reason": "RFC 3986 §5.2.4: percent-encoded \"..\" segments (\\"%2e%2e\\") decode and remove: \"/%2e%2e/%2e%2e/%2e%2e/B/b/a.txt\" → \"/B/b/a.txt\"."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §3.3: path \"/a/A/b/a.txt\" follows symlink A→../B (from model FS) and leads to \"/B/b/a.txt\".  Servers may or may not follow symlinks."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §3.3: path \"/B/a/b/a.txt\" follows symlink a→../a, leading to \"/a/b/a.txt\"."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a/b/a.txt",
+    "reason": "RFC 3986 §5.2.4: path \"/a/A/../a/b/a.txt\" normalizes to \"/a/b/a.txt\" by removing \"/A/..\"; symlinks not needed after normalization."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../../B/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/B/b/a.txt",
+    "reason": "RFC 3986 §5.2.4: \"/a/A/../../B/b/a.txt\" → \"/B/b/a.txt\" (\"a/A/../..\" goes to root \"/\")."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../../../B/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/B/b/a.txt",
+    "reason": "RFC 3986 §5.2.4: extra leading \"..\" beyond root still yields \"/B/b/a.txt\" (cannot go above \"/\")."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/a/A/a/A/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 500",
+    "reason": "RFC 3986 §3.3: repeated symlinks (A→B and B→a loop) can cause an infinite loop.  Servers may detect this (error) or limit resolution."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "./this:that",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/this:that",
+    "reason": "RFC 3986 §4.2: \".\" indicates current directory; \"/this:that\" is treated as path.  A colon in segment is allowed if scheme is given (here \"/this:that\")."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": ":that",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §4.2: A relative-path reference cannot start with a colon (would be mistaken for a scheme):contentReference[oaicite:26]{index=26}."
+  },
+  {
+    "scheme": "http",
+    "authority": "Example.com",
+    "path": "/A/B/a.TXT",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/A/B/a.TXT",
+    "normalized_scheme": "http",
+    "reason": "RFC 3986 §6.2.2.1: scheme and host are lowercased (\"Example.com\" → \"example.com\").  Path case is preserved (case-sensitive by generic syntax)."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/%41/b/%2f",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a/A/b/%2F",
+    "reason": "RFC 3986 §6.2.2.1: percent-encoded unreserved \"%41\" → 'A'.  Percent-encoded '%2f' (encoded slash) remains encoded (slash is a gen-delim):contentReference[oaicite:27]{index=27}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/%7e",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/a/b/~",
+    "reason": "RFC 3986 §6.2.2.2: \"%7E\" decodes to '~' (unreserved):contentReference[oaicite:28]{index=28}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%41/%61/%2d/%2e/%5f",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_path": "/A/a/-/. /_",
+    "reason": "RFC 3986 §6.2.2.2: decode percent-encoded unreserved characters: \"%41\"→'A', \"%61\"→'a', \"%2d\"→'-', \"%2e\"→'.', \"%5f\"→'_':contentReference[oaicite:29]{index=29}."
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a.txt?Q=VaLuE",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.4: queries may contain unreserved and reserved chars. Here query is not shown to server in path resolution. (Case preserved except scheme/host.)"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/index.html",
+    "query": "",
+    "fragment": "#section1",
+    "expected": "200",
+    "normalized_path": "/index.html",
+    "reason": "RFC 3986 §3.5: fragment after '#' is not sent to server. Server serves \"/index.html\" (fragment used client-side only)."
+  },
+  {
+    "scheme": "http",
+    "authority": "cnn.example.com&story=breaking_news@10.0.0.1",
+    "path": "/top_story.htm",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §7.6: userinfo may contain misleading text. Here userinfo=\"cnn.example.com&story=breaking_news\", host=\"10.0.0.1\".  Server fetches /top_story.htm from 10.0.0.1."
+  },
+  {
+    "scheme": "http",
+    "authority": "user:passwd@localhost",
+    "path": "/a/b.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §7.5: password in userinfo is deprecated.  \"user:passwd@\" may be rejected or ignored; server may treat this as host=\"localhost\" with userinfo present."
+  },
+  {
+    "scheme": "http",
+    "authority": "user%3Apass@localhost",
+    "path": "/a/b.txt",
+    "query": "",
+    "fragment": "",
+    "expected": "200 or 400",
+    "reason": "RFC 3986 §2.4: userinfo percent-encoded: \"%3A\" decodes to ':' (so userinfo=\"user:pass\").  Some servers reject or accept this similarly."
+  }
+]

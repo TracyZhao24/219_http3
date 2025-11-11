@@ -1,0 +1,428 @@
+[
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/index.html",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.1: 'http' is a valid scheme (begins with letter, followed by ALPHA):contentReference[oaicite:31]{index=31}"
+  },
+  {
+    "scheme": "HTTP",
+    "authority": "example.com",
+    "path": "/index.html",
+    "query": "",
+    "fragment": "",
+    "normalized_scheme": "http",
+    "expected": "200",
+    "reason": "RFC 3986 §3.1: scheme names are case-insensitive; 'HTTP' should be accepted and normalized to 'http':contentReference[oaicite:32]{index=32}"
+  },
+  {
+    "scheme": "1http",
+    "authority": "example.com",
+    "path": "/index.html",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.1: scheme must begin with a letter (not digit):contentReference[oaicite:33]{index=33}"
+  },
+  {
+    "scheme": "h",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.1: minimal scheme with one letter is valid (ALPHA only):contentReference[oaicite:34]{index=34}"
+  },
+  {
+    "scheme": "ht+tp",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.1: '+' is allowed in scheme after first character:contentReference[oaicite:35]{index=35}"
+  },
+  {
+    "scheme": "ht.tp",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.1: '.' is allowed in scheme after first character:contentReference[oaicite:36]{index=36}"
+  },
+  {
+    "scheme": "ht-tp",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.1: '-' is allowed in scheme after first character:contentReference[oaicite:37]{index=37}"
+  },
+  {
+    "scheme": "ht_tps",
+    "authority": "example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.1: '_' is not allowed in scheme (only letters, digits, '+', '-', '.'):contentReference[oaicite:38]{index=38}"
+  },
+  {
+    "scheme": "http",
+    "authority": "EXAMPLE.COM",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "normalized_scheme": "http",
+    "reason": "RFC 3986 §6.2.2: host names are case-insensitive and should be lowercased:contentReference[oaicite:45]{index=45}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §6.2.3: explicit default port is equivalent to omitting the port for HTTP:contentReference[oaicite:46]{index=46}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:00080",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.2.3: port may have leading zeros; '00080' is interpreted as port 80 (default):contentReference[oaicite:47]{index=47}:contentReference[oaicite:48]{index=48}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:81",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.2.3: non-default port '81' is allowed and should be accepted (explicit port):contentReference[oaicite:49]{index=49}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:-80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2.3: port must be DIGIT only; '-' is not allowed:contentReference[oaicite:50]{index=50}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com:8O",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2.3: port must consist of digits only; 'O' is not a digit:contentReference[oaicite:51]{index=51}"
+  },
+  {
+    "scheme": "http",
+    "authority": "[2001:db8::1]:80",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.2.2: valid IPv6 address literal in brackets with default port (omitted is equivalent):contentReference[oaicite:52]{index=52}:contentReference[oaicite:53]{index=53}"
+  },
+  {
+    "scheme": "http",
+    "authority": "[2001:db8::1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2.2: IPv6 literals must be enclosed in brackets; missing ']' makes it invalid:contentReference[oaicite:54]{index=54}"
+  },
+  {
+    "scheme": "http",
+    "authority": "[v1:ff00::1]",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2.2: IPv6 literal must not use a version flag (no leading 'v'):contentReference[oaicite:55]{index=55}"
+  },
+  {
+    "scheme": "http",
+    "authority": "256.100.1.1",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2.2: IPv4 octets must be 0-255; '256' is out of range (invalid dec-octet):contentReference[oaicite:56]{index=56}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.2.2: a reg-name may be a single label (no dots) if the OS permits; DNS rules suggest dots but RFC does not forbid 'example':contentReference[oaicite:57]{index=57}"
+  },
+  {
+    "scheme": "http",
+    "authority": "_example.com",
+    "path": "/",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.2.2: underscore is an unreserved character (allowed in reg-name by generic syntax):contentReference[oaicite:58]{index=58}"
+  },
+  {
+    "scheme": "http",
+    "authority": "",
+    "path": "/path",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.2: HTTP requires a non-empty host; an empty authority (no host) is invalid:contentReference[oaicite:59]{index=59}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/",
+    "expected": "200",
+    "reason": "RFC 3986 §6.2.3: empty path in HTTP is equivalent to \"/\" (default index):contentReference[oaicite:65]{index=65}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "noSlash",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.3: with authority present, path must be empty or start with '/'; 'noSlash' violates this rule:contentReference[oaicite:66]{index=66}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo%2Fbar/baz",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/foo/bar/baz",
+    "expected": "200",
+    "reason": "RFC 3986 §2.2: '%2F' in a segment represents literal '/' after decoding, resulting in path \"/foo/bar/baz\":contentReference[oaicite:67]{index=67}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e/%2e%2e/index.html",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/index.html",
+    "expected": "200",
+    "reason": "RFC 3986 §5.2.4: encoded dot-segments \"%2e\" and \"%2e%2e\" should be decoded to '.'/'..' and then removed, normalizing path to \"/index.html\":contentReference[oaicite:68]{index=68}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/./a/../b/./c/",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/b/c/",
+    "expected": "200",
+    "reason": "RFC 3986 §5.2.4: remove \"/./\" and \"/../\" segments by algorithm (Input \"/./a/../b/./c/\" → \"/b/c/\"):contentReference[oaicite:69]{index=69}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/...",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §5.2.4: a segment \"...\" is not a dot-segment (not equal to \".\" or \"..\") and should be preserved:contentReference[oaicite:70]{index=70}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo bar",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §2.1: space must be percent-encoded (as \"%20\"); raw space in path is not allowed:contentReference[oaicite:71]{index=71}:contentReference[oaicite:72]{index=72}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §2.1: '%' must be followed by two hex digits; '%2' is an incomplete percent-encoding and invalid"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo%2Gbar",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §2.1: percent-encoding uses only HEXDIG; '%2G' is invalid because 'G' is not a hex digit"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo:bar/baz",
+    "query": "",
+    "fragment": "",
+    "expected": "200",
+    "reason": "RFC 3986 §3.3: ':' is allowed in path segments (pchar) and does not violate syntax:contentReference[oaicite:73]{index=73}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/foo?bar",
+    "query": "",
+    "fragment": "",
+    "expected": "400",
+    "reason": "RFC 3986 §3.4: '?' starts the query; using '?' in the path without percent-encoding is not allowed in a path segment:contentReference[oaicite:74]{index=74}:contentReference[oaicite:75]{index=75}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%5findex.html",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/_index.html",
+    "expected": "200",
+    "reason": "RFC 3986 §2.3: '%5F' (underscore) is an unreserved character and should be decoded to '_' during normalization:contentReference[oaicite:78]{index=78}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%7euser/",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/~user/",
+    "expected": "200",
+    "reason": "RFC 3986 §2.3: '%7E' (tilde) is an unreserved character and should be decoded to '~':contentReference[oaicite:79]{index=79}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/A%2fb",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/A/b",
+    "expected": "200",
+    "reason": "RFC 3986 §6.2.2.1: percent-encoded hex digits are case-insensitive and should normalize to uppercase; here '%2f' -> '%2F' representing '/':contentReference[oaicite:80]{index=80}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%41/test",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/A/test",
+    "expected": "200",
+    "reason": "RFC 3986 §2.3: '%41' decodes to 'A' (unreserved) and URI equivalence allows decoding for normalization:contentReference[oaicite:81]{index=81}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/B/a/../b/../../a/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/a/b/a.txt",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §5.2.4: After resolving '/B/a/../b/../../a/b/a.txt', dot-segments normalize to '/a/b/a.txt'.  Servers must ensure this does not escape the root:contentReference[oaicite:84]{index=84}:contentReference[oaicite:85]{index=85}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/../b/a.txt",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/a/b/a.txt",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §5.2.4: Removing '/../' yields '/a/b/a.txt'.  Here '/a/A' (symlink to '/B') is negated by '..', resulting in a safe path:contentReference[oaicite:86]{index=86}:contentReference[oaicite:87]{index=87}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/./../b/a.txt",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/a/b/a.txt",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §5.2.4: './' has no effect and '/../' removes the 'b' segment, normalizing to '/a/b/a.txt' (symlinks resolved afterward):contentReference[oaicite:88]{index=88}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/A/b/../../B/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/B/b/a.txt",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §5.2.4: '/../' sequences move up directories: '/a/A/b/../../B/b/a.txt' → '/B/b/a.txt'.  Servers must prevent this from leaving the root:contentReference[oaicite:89]{index=89}:contentReference[oaicite:90]{index=90}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/../../etc/passwd",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/etc/passwd",
+    "expected": "403",
+    "reason": "RFC 3986 §5.2.4: path '/../../etc/passwd' normalizes to '/etc/passwd'.  This tests directory traversal: server should forbid access (security):contentReference[oaicite:91]{index=91}:contentReference[oaicite:92]{index=92}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/.%2e/%2e%2e/etc/passwd",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/etc/passwd",
+    "expected": "403",
+    "reason": "RFC 3986 §5.2.4: '%2e' encodes '.', so '/.%2e/%2e%2e/etc/passwd' becomes '/../etc/passwd'; tests percent-decoded traversal:contentReference[oaicite:93]{index=93}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/%2E%2e/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/b/a.txt",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §5.2.4: '%2E%2E' is '..'; '/a/../b/a.txt' → '/b/a.txt'.  Tests percent-encoded dot removal before symlink resolution:contentReference[oaicite:94]{index=94}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/a/b/..%2F..%2Fa/b/a.txt",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/a/b/a.txt",
+    "expected": "400",
+    "reason": "RFC 3986 §2.1: '%2F' encodes '/', but decoding happens only after path parsing; '/..%2F..%2Fa/b/a.txt' is a malformed path (partial percent-encoding):contentReference[oaicite:95]{index=95}:contentReference[oaicite:96]{index=96}"
+  },
+  {
+    "scheme": "http",
+    "authority": "example.com",
+    "path": "/%2e%2e%2Fetc/passwd",
+    "query": "",
+    "fragment": "",
+    "normalized_path": "/etc/passwd",
+    "expected": "200 or 403",
+    "reason": "RFC 3986 §5.2.4: '%2F' encodes '/', so '/%2e%2e%2Fetc/passwd' → '/../etc/passwd'; tests decoding before dot-removal:contentReference[oaicite:97]{index=97}"
+  }
+]
+
+

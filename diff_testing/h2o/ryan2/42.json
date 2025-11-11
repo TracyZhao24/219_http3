@@ -1,0 +1,4 @@
+Test case 42: http://user:passwd@localhost/a/b.txt
+Request to http://user:passwd@localhost/a/b.txt returned error: 404
+Resolved URL: http://localhost:8083/a/b.txt
+
