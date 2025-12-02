@@ -1,4 +1,0 @@
-Test case 41: http://cnn.example.com&story=breaking_news@10.0.0.1/top_story.htm
-Request to http://cnn.example.com&story=breaking_news@10.0.0.1/top_story.htm returned error: 404
-Resolved URL: http://localhost:8080/top_story.htm
-

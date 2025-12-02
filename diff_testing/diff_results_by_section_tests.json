@@ -1,0 +1,1832 @@
+[
+    {
+        "test_case": 0,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 1,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 3,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 4,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 5,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 6,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 7,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 13,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 14,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 15,
+        "status_code": {
+            "nginx": 301,
+            "apache": 404,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 20,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 21,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 27,
+        "status_code": {
+            "nginx": 301,
+            "apache": 404,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 28,
+        "status_code": {
+            "nginx": 404,
+            "apache": 404,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 29,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 30,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 31,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 38,
+        "status_code": {
+            "nginx": 301,
+            "apache": 404,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 39,
+        "status_code": {
+            "nginx": 301,
+            "apache": 404,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 54,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 55,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 58,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 67,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 73,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 74,
+        "status_code": {
+            "nginx": 404,
+            "apache": 404,
+            "caddy": 404,
+            "lighttpd": 403,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 82,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 85,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 89,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 92,
+        "status_code": {
+            "nginx": 404,
+            "apache": 404,
+            "caddy": 404,
+            "lighttpd": 403,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 98,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 99,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 101,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 105,
+        "status_code": {
+            "nginx": 301,
+            "apache": 404,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 107,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 109,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 110,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 111,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 112,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 116,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 117,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 119,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 120,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 121,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 122,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 132,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 134,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 135,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 136,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 137,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 138,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 139,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 140,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 141,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 142,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 147,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 148,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 149,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 150,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 151,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 152,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 153,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 154,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 155,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 156,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 159,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 160,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 168,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 169,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 170,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 171,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 177,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 178,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 179,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 180,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 181,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 182,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 184,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 186,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 187,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 188,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 193,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 194,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 195,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 196,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 197,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 198,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 201,
+        "status_code": {
+            "nginx": 404,
+            "apache": 404,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 203,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 204,
+        "status_code": {
+            "nginx": 404,
+            "apache": 404,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 205,
+        "status_code": {
+            "nginx": 404,
+            "apache": 404,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 210,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 211,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 212,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 213,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 214,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 215,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 216,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 217,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 218,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 219,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 220,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 221,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 222,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 223,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 224,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 225,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 227,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 228,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 229,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 230,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 231,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 232,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 235,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 237,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 238,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 239,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 240,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 242,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 243,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 244,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 245,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 246,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 247,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 248,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 249,
+        "status_code": {
+            "nginx": 200,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 251,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 252,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 253,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 254,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 255,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 260,
+        "status_code": {
+            "nginx": 404,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 268,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 269,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 272,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 273,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 308,
+            "lighttpd": 400,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 274,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 308,
+            "lighttpd": 400,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 275,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 276,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 308,
+            "lighttpd": 400,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 287,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 400,
+            "lighttpd": 404,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 288,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 289,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 290,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 291,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 293,
+        "status_code": {
+            "nginx": 403,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 403,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 295,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 314,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 331,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 336,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 342,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 343,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 344,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 358,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 361,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 362,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 404,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 368,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 369,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 370,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 376,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 382,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 384,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 409,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 412,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 416,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 308,
+            "lighttpd": 400,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 420,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 423,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 400,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 438,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 440,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 449,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 451,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 452,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 454,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 455,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 457,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 459,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 460,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 462,
+        "status_code": {
+            "nginx": 400,
+            "apache": 400,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 464,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 471,
+        "status_code": {
+            "nginx": 301,
+            "apache": 301,
+            "caddy": 308,
+            "lighttpd": 301,
+            "h2o": 301
+        }
+    },
+    {
+        "test_case": 474,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 308,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 475,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 477,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 479,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    },
+    {
+        "test_case": 482,
+        "status_code": {
+            "nginx": 200,
+            "apache": 200,
+            "caddy": 200,
+            "lighttpd": 200,
+            "h2o": 404
+        }
+    }
+]

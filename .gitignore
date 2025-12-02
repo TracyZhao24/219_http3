@@ -19,3 +19,5 @@ diff_testing/nginx/
 diff_testing/caddy/
 diff_testing/h2o/
 diff_testing/lighttpd/
+
+.venv/

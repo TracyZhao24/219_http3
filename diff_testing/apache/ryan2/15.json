@@ -1,4 +1,0 @@
-Test case 15: http:///a.txt
-Request to http:///a.txt returned error: 400
-Resolved URL: http://localhost:8081/a.txt
-

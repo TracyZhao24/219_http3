@@ -1,6 +1,0 @@
-Test case 40: http://example.com/index.html
-Request to http://example.com/index.html completed with status code: 200
-Resolved URI: http://localhost:8081/index.html
-Response content from http://example.com/index.html: <html><body><h1>It works!</h1></body></html>
-
-

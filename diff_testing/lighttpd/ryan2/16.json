@@ -1,6 +1,0 @@
-Test case 16: http://example.com//a/b/a.txt
-Request to http://example.com//a/b/a.txt completed with status code: 200
-Resolved URI: http://localhost:8084//a/b/a.txt
-Response content from http://example.com//a/b/a.txt: a/b/a.txt
-
-

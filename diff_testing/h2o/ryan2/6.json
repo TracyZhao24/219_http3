@@ -1,4 +1,0 @@
-Test case 6: http://User@example.com/a.txt
-Request to http://User@example.com/a.txt returned error: 404
-Resolved URL: http://localhost:8083/a.txt
-

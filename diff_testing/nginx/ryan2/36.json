@@ -1,4 +1,0 @@
-Test case 36: http://example.com/a/%41/b/%2f
-Request to http://example.com/a/%41/b/%2f returned error: 403
-Resolved URL: http://localhost:8080/a/%41/b/%2f
-
